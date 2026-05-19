@@ -1,0 +1,10 @@
+pymupdf>=1.24
+pdfplumber>=0.11
+sentence-transformers>=3.0
+qdrant-client>=1.12
+google-genai>=0.3
+python-dotenv>=1.0
+
+# OCR fallback (also needs: brew install tesseract tesseract-lang poppler)
+pytesseract>=0.3.13
+pdf2image>=1.17
