@@ -1,0 +1,272 @@
+{
+  "summary": {
+    "n_items": 14,
+    "refusal_accuracy_pct": 78.6,
+    "retrieval_accuracy_pct": 90.0,
+    "answer_correctness_pct": NaN,
+    "n_judged": 0,
+    "retrieval_by_doc": {
+      "Тушаал №27": 0.0,
+      "гарын авлага 2022": 100.0,
+      "ШУТИС дүрэм 2022 (web)": 100.0,
+      "ШУТИС тушаал №199 (2025-06-06)": 100.0,
+      "Тушаал №27 (2025-2026 хичээлийн жил)": 100.0,
+      "Шинэ оюутанд зориулсан гарын авлага 2022": 100.0,
+      "ШУТИС сэтгүүл": 100.0,
+      "2030 хөтөлбөрийн гарын авлага": 100.0
+    }
+  },
+  "results": [
+    {
+      "id": "seed-grade-breakdown",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Оюутны хичээлийн дүнг нийт хэдэн оноогоор үнэлдэг вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "Тушаал №27",
+      "top_score": 0.7404934,
+      "refusal_ok": true,
+      "retrieval_ok": false,
+      "correctness": null
+    },
+    {
+      "id": "seed-grade-A",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "A үнэлгээ авахын тулд хэдэн оноо авах ёстой вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.65780747,
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "seed-grade-lowest",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Хамгийн доод буюу унасан үнэлгээ юу вэ, хэдэн голч оноотой вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.5772215,
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "seed-grade-Aminus",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "A- үнэлгээний онооны хязгаар болон голч оноо хэд вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.66931486,
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "seed-refuse-flight",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Улаанбаатараас Токио хүрэх онгоцны тийзний үнэ хэд вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.51078683,
+      "refusal_ok": false,
+      "retrieval_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "seed-refuse-recipe",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Гуляшийн жор бичиж өгөөч.",
+      "answer": null,
+      "sources": [
+        "ШУТИС дүрэм 2022 (web)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.47863713,
+      "refusal_ok": false,
+      "retrieval_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "seed-refuse-weather",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Маргааш Улаанбаатарт цаг агаар ямар байх вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "ШУТИС дүрэм 2022 (web)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.49287534,
+      "refusal_ok": false,
+      "retrieval_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "seed-refuse-celebrity",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "2026 оны дэлхийн шатрын аварга хэн бэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.40817466,
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "gen-001",
+      "category": "in-scope",
+      "origin": "generated",
+      "question": "Сургалтын нэгдсэн хуанлид ямар сургалтын түвшний процессуудыг тусгах вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС дүрэм 2022 (web)",
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "ШУТИС дүрэм 2022 (web)",
+      "top_score": 0.6912364,
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "gen-002",
+      "category": "in-scope",
+      "origin": "generated",
+      "question": "Бакалаврын дипломын төсөл бүхий хичээл, дадлага, төсөл нь хэдээс хэдэн дугаарын хооронд байрлах вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "ШУТИС тушаал №199 (2025-06-06)",
+      "top_score": 0.64601314,
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "gen-003",
+      "category": "in-scope",
+      "origin": "generated",
+      "question": "Бүртгүүлэгч элсэлтийн бүртгэл хаах хугацаанаас өмнө сонгосон хөтөлбөрийн жагсаалтыг хэдэн удаа өөрчилж болох вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "Тушаал №27 (2025-2026 хичээлийн жил)",
+      "top_score": 0.70653677,
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "gen-004",
+      "category": "in-scope",
+      "origin": "generated",
+      "question": "10 дугаар сарын 03-наас 07-ны хооронд ямар аян зохион байгуулагдах вэ?",
+      "answer": null,
+      "sources": [
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "Шинэ оюутанд зориулсан гарын авлага 2022",
+      "top_score": 0.5750279,
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "gen-005",
+      "category": "in-scope",
+      "origin": "generated",
+      "question": "Сэтгүүлд ирүүлсэн бүтээлд тусгай дугаарыг ямар хэлбэрээр өгөх вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС сэтгүүл"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "ШУТИС сэтгүүл",
+      "top_score": 0.6585274,
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "gen-006",
+      "category": "in-scope",
+      "origin": "generated",
+      "question": "Багш, судлаачдыг олон улсын хурал, семинар, форум, зөвлөгөөн, симпозиумд оролцуулахыг дэмжихээс гадна ямар үзүүлэлтүүдийг хэмжих вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "2030 хөтөлбөрийн гарын авлага",
+      "top_score": 0.7513715,
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "correctness": null
+    }
+  ]
+}

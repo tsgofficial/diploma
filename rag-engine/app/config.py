@@ -25,6 +25,10 @@ QDRANT_HOST = os.environ.get("QDRANT_HOST", "localhost")
 QDRANT_PORT = int(os.environ.get("QDRANT_PORT", "6333"))
 COLLECTION = "policies"
 
+# API — shared secret the Node core-backend must present on every request.
+# The rag-engine is internal-only; it should never be exposed to the browser.
+INTERNAL_API_KEY = os.environ.get("RAG_INTERNAL_KEY", "dev-internal-key-change-me")
+
 # Embeddings
 EMBED_MODEL_NAME = "BAAI/bge-m3"
 EMBED_DIM = 1024

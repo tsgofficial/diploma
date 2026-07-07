@@ -1,6 +1,24 @@
+# Python
 __pycache__/
 *.pyc
 .venv/
 data/
+
+# Node / Next
+node_modules/
+dist/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Env & secrets
 .env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# OS
 .DS_Store

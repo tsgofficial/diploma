@@ -1,0 +1,74 @@
+[
+  {
+    "id": "seed-grade-breakdown",
+    "question": "Оюутны хичээлийн дүнг нийт хэдэн оноогоор үнэлдэг вэ?",
+    "reference_answer": "Нийт 100 оноогоор үнэлдэг. Үүнээс явцын үнэлгээ 70 хүртэл оноо, улирлын шалгалт 50 хүртэл оноо байна.",
+    "expected_source": "Тушаал №27",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-grade-A",
+    "question": "A үнэлгээ авахын тулд хэдэн оноо авах ёстой вэ?",
+    "reference_answer": "96-100 оноо авбал A үнэлгээ буюу 4.0 голч оноотой тэнцэнэ.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-grade-lowest",
+    "question": "Хамгийн доод буюу унасан үнэлгээ юу вэ, хэдэн голч оноотой вэ?",
+    "reference_answer": "Хамгийн доод үнэлгээ нь F бөгөөд 0.0 голч оноотой тэнцэнэ.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-grade-Aminus",
+    "question": "A- үнэлгээний онооны хязгаар болон голч оноо хэд вэ?",
+    "reference_answer": "A- үнэлгээ нь 91-95 оноонд харгалзах бөгөөд 3.7 голч оноотой.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-flight",
+    "question": "Улаанбаатараас Токио хүрэх онгоцны тийзний үнэ хэд вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-recipe",
+    "question": "Гуляшийн жор бичиж өгөөч.",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-weather",
+    "question": "Маргааш Улаанбаатарт цаг агаар ямар байх вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-celebrity",
+    "question": "2026 оны дэлхийн шатрын аварга хэн бэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  }
+]
