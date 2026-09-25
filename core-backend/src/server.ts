@@ -5,10 +5,12 @@ import { createApp } from './app';
 import { env } from './config/env';
 import { assertDbConnection } from './config/database';
 import { syncModels } from './models';
+import { seedAdmin } from './config/seed';
 
 async function main(): Promise<void> {
   await assertDbConnection();
   await syncModels();
+  await seedAdmin();
 
   const app = createApp();
   app.listen(env.PORT, () => {

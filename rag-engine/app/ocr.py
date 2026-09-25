@@ -58,8 +58,8 @@ def check_dependencies() -> tuple[bool, str]:
     return True, "ok"
 
 
-def extract_with_ocr(pdf_path: Path, verbose: bool = True) -> str:
-    """OCR every page of `pdf_path` and return the joined text."""
+def ocr_pages(pdf_path: Path, verbose: bool = True) -> list[str]:
+    """OCR every page of `pdf_path`. Returns one string per page, in order."""
     ok, msg = check_dependencies()
     if not ok:
         raise RuntimeError(f"OCR not available: {msg}")
@@ -87,4 +87,10 @@ def extract_with_ocr(pdf_path: Path, verbose: bool = True) -> str:
         total = sum(len(t) for t in page_texts)
         print(f"  OCR: done. {total} chars over {len(images)} pages.")
 
-    return "\n\n".join(page_texts)
+    return page_texts
+
+
+def extract_with_ocr(pdf_path: Path, verbose: bool = True) -> str:
+    """OCR every page and return the joined text (kept for callers that
+    don't need page boundaries)."""
+    return "\n\n".join(ocr_pages(pdf_path, verbose=verbose))

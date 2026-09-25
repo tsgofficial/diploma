@@ -1,0 +1,452 @@
+[
+  {
+    "id": "exp-hb-travel-provinces",
+    "question": "Замын зардал нөхөн авахад ямар аймгуудаас суралцаж буй оюутнууд хамаарах вэ?",
+    "reference_answer": "500 км-ээс дээш зайтай Баян-Өлгий, Увс, Завхан, Говь-Алтай, Ховд, Дорнод, Сүхбаатар, Хөвсгөл, Баянхонгор, Өмнөговь аймгуудаас суралцаж буй оюутнууд. Бичиг баримтаа Сургалтын албанд бүрдүүлж өгнө.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-hb-RW-score",
+    "question": "R болон W тэмдэглэгээнд харгалзах үнэлгээний оноо хэд вэ?",
+    "reference_answer": "R, W тэмдэглэгээнд харгалзах үнэлгээний оноо 0.0 байна.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-hb-W-meaning",
+    "question": "Дүнгийн хуудсан дээрх W тэмдэглэгээ юу гэсэн утгатай вэ?",
+    "reference_answer": "W — хичээлийн явцад суралцахаас татгалзаж хаясан гэсэн тэмдэглэгээ.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-hb-state-support",
+    "question": "Төрөөс үзүүлэх санхүүгийн дэмжлэгт ШУТИС-ийн ямар суралцагчид хамрагдах вэ?",
+    "reference_answer": "Бүтэн өнчин суралцагч; хөгжлийн бэрхшээлтэй иргэн эсвэл эцэг эх нь хоёулаа хөгжлийн бэрхшээлтэй бакалаврын суралцагч; хөдөлмөрийн чадвараа бүрэн алдсан гишүүнтэй өрхийн нэг суралцагч; цаатан өрхийн суралцагч; засгийн газар хоорондын хэлэлцээрээр суралцаж буй гадаадын иргэн; нэг гэр бүлийн 3 ба түүнээс дээш хүүхэд бакалаврт зэрэг суралцаж байгаа бол 1 суралцагч.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-hb-toyota",
+    "question": "ШУТИС-Тоёото сангийн тэтгэлгийн бүртгэл хэзээ явагддаг вэ?",
+    "reference_answer": "10 сарын эхний 7 хоногт.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-hb-student-soldier",
+    "question": "Оюутан цэрэг хөтөлбөрийн бүртгэл хэзээ явагдах вэ?",
+    "reference_answer": "02 дугаар сарын 13-17-ны хооронд (Даваа-Баасан) бүрэлдэхүүн сургууль дээр явагдана.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-hb-insurance",
+    "question": "19 насанд хүрсэн суралцагч эрүүл мэндийн даатгалын шимтгэлд хэдэн төгрөг төлөх вэ?",
+    "reference_answer": "Сарын 4200, жилийн 50400 төгрөг.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-hb-edison",
+    "question": "Амжилттай суралцах зөвлөгөөнд Эдисоны ямар үгийг иш татсан бэ?",
+    "reference_answer": "“Шинжлэх ухаанд бүх зүйлийн 1%-ийг авъяасаар, 99%-ийг хичээл зүтгэлээр бий болгодог”.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-qm-effective-date",
+    "question": "ШУТИС-ийн чанарын менежментийн тогтолцооны гарын авлагыг хэдний өдрөөс эхлэн мөрдсөн бэ?",
+    "reference_answer": "2022 оны 11 дүгээр сарын 04-ний өдрөөс эхлэн мөрдсөн.",
+    "expected_source": "дүрэм 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-qm-order-number",
+    "question": "Чанарын менежментийн тогтолцооны гарын авлагыг ямар дугаартай тушаалаар баталсан бэ?",
+    "reference_answer": "ШУТИС-ийн захирлын үүрэг гүйцэтгэгчийн 2022 оны 11 дүгээр сарын 04-ний өдрийн A/303 дугаар тушаалаар.",
+    "expected_source": "дүрэм 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-qm-survey-newcomers",
+    "question": "Шинэ элсэгчдээс санал асуулгыг хэзээ, ямар түүврийн хэмжээтэй авдаг вэ?",
+    "reference_answer": "Хичээлийн жилийн эхэнд 1 удаа, 60-80%-ийн түүврийн хэмжээтэй, ярилцлага, асуулгын хэрэгслээр авна.",
+    "expected_source": "дүрэм 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-qm-top-management",
+    "question": "Чанарын менежментийн гарын авлагад ШУТИС-ийн дээд удирдлага гэж хэнийг ойлгох вэ?",
+    "reference_answer": "ШУТИС-ийн Удирдах зөвлөл, Эрдмийн зөвлөл, Захирлын зөвлөл, Захирлыг ойлгоно.",
+    "expected_source": "дүрэм 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-qm-risk-methods",
+    "question": "Эрсдэл, боломжийг тодорхойлоход ямар шинжилгээний аргачлалуудыг хэрэглэж болох вэ?",
+    "reference_answer": "SWOT эсвэл PESTLE шинжилгээ, Аюулын шинжилгээний аргачлалыг хэрэглэж болно.",
+    "expected_source": "дүрэм 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-2030-goal1",
+    "question": "ШУТИС-ийн 2030 хөтөлбөрийн нэгдүгээр зорилго юу вэ?",
+    "reference_answer": "Хүнлэг, энэрэнгүй, бүтээлч сэтгэлгээтэй шинэ үеийн инженер, манлайлагчдыг бэлтгэнэ.",
+    "expected_source": "2030",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-2030-goal2",
+    "question": "2030 хөтөлбөрийн судалгааны чиглэлийн зорилго юу вэ?",
+    "reference_answer": "Монгол улс, олон улсын хэмжээнд тулгамдаж буй асуудлуудыг шийдвэрлэхүйц судалгааг хөгжүүлнэ.",
+    "expected_source": "2030",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-2030-goal4",
+    "question": "2030 хөтөлбөрийн дөрөвдүгээр зорилго юу вэ?",
+    "reference_answer": "Нийгмийн хариуцлагаа ухамсарласан манлайлагч их сургууль болно.",
+    "expected_source": "2030",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-2030-asia100",
+    "question": "Төрөөс боловсролын талаар баримтлах бодлогын 7.13-т ямар зорилт дэвшүүлсэн бэ?",
+    "reference_answer": "Монгол Улсын дөрвөөс доошгүй их сургуулийг Азийн шилдэг 100 их сургуулийн эгнээнд хүргэсэн байна.",
+    "expected_source": "2030",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o27-scholarship-776",
+    "question": "Элсэлтийн шалгалтад суурь болон дагалдах хичээл тус бүрд 776-800 оноо авсан элсэгчид ямар тэтгэлэг олгох вэ?",
+    "reference_answer": "30 багц цагийн сургалтын төлбөрийн 100%-ийн тэтгэлэг олгоно.",
+    "expected_source": "Тушаал №27",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o27-scholarship-700",
+    "question": "ЭШ-д хичээл тус бүрд 700-750 оноо авсан элсэгчид сургалтын төлбөрийн хэдэн хувийн тэтгэлэг авах вэ?",
+    "reference_answer": "30 багц цагийн сургалтын төлбөрийн 50%-ийн тэтгэлэг.",
+    "expected_source": "Тушаал №27",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o27-open-selection",
+    "question": "Нээлттэй хэлбэрээр хөтөлбөр сонголтыг цахим системээр хэдий хүртэл явуулах вэ?",
+    "reference_answer": "08 сарын 15 хүртэл цахим системээр тасралтгүй явуулна.",
+    "expected_source": "Тушаал №27",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o27-regional-loan",
+    "question": "Орон нутагт үйл ажиллагаа явуулж байгаа ДаТС, ЭЦДС, ӨмТДС-д суралцагчид сургалтын төлбөрийн хэдэн хувьтай тэнцэх зээл олгох вэ?",
+    "reference_answer": "Сургалтын төлбөрийн 50 хувьтай тэнцэх хэмжээний зээл олгоно.",
+    "expected_source": "Тушаал №27",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o27-olympiad-skill",
+    "question": "Ур чадварын шалгалтын оноог шууд тооцох олимпиадын шалгуур юу вэ?",
+    "reference_answer": "Техник технологийн улсын олимпиадын Дизайн технологи, зураг зүй, Дүрслэх урлагийн төрлүүдэд эхний 5 байрт шалгарсан бүртгүүлэгчийн оноог шууд тооцно.",
+    "expected_source": "Тушаал №27",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o27-central-commission",
+    "question": "Элсэлтийн төв комисс ямар үүрэгтэй вэ?",
+    "reference_answer": "Элсэлтийн үйл ажиллагааг удирдлагаар хангаж ажлын төлөвлөгөө батлах, явцад хяналт тавих, ур чадварын шалгалтын комисс байгуулах, маркетингийн үйл ажиллагаанд хяналт тавих, өргөдөл гомдлыг шийдвэрлэх.",
+    "expected_source": "Тушаал №27",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o27-no-double",
+    "question": "Сургалтын төлбөрийн тэтгэлэг, урамшууллыг давхардуулж олгох уу?",
+    "reference_answer": "Үгүй, сургалтын төлбөрийн тэтгэлэг, урамшууллыг давхардуулж олгохгүй.",
+    "expected_source": "Тушаал №27",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o199-credits-load",
+    "question": "Оюутан үндсэн улиралд дунджаар хэдэн кредит судлах нь зохимжтой, дээд хэмжээ нь хэд вэ?",
+    "reference_answer": "Дунджаар 15 кредит судлах нь зохимжтой, дээд хэмжээ 21 кредит. Өвлийн улиралд 3, зуны улиралд 6-аас илүүгүй.",
+    "expected_source": "тушаал №199",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o199-deans-list",
+    "question": "Захирлын нэрэмжит хуудсанд орохын тулд оюутан ямар шаардлага хангасан байх ёстой вэ?",
+    "reference_answer": "Тухайн улиралд 15-аас багагүй кредит цуглуулсан, улирлын голч дүн 3.60 ба түүнээс дээш, сонгосон хичээлийн аль нэгд F үнэлгээ эсвэл E тэмдэглэгээ аваагүй байх.",
+    "expected_source": "тушаал №199",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o199-gpa-warning",
+    "question": "Улирлын үнэлгээний голч дүн 1.00 ба түүнээс доош бол оюутныг хэрхэн үзэх вэ?",
+    "reference_answer": "“Тухайн улиралд хангалтгүй суралцсан” гэж үзэж, нэрийг “Анхааруулгын хуудас”-нд бичиж сануулна.",
+    "expected_source": "тушаал №199",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o199-E-makeup",
+    "question": "E тэмдэглэгээтэй хичээлийн шалгалтыг хэрхэн, ямар хугацаанд нөхөн өгөх вэ?",
+    "reference_answer": "Тухайн хичээлийн кредитийн 30 хувийн төлбөрийг төлж, 4 улирлын дотор нөхөн өгнө. Хүндэтгэн үзэх шалтгаантай бол нотлох баримтыг үндэслэн төлбөргүй нөхөн өгнө.",
+    "expected_source": "тушаал №199",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o199-project-credit-hours",
+    "question": "Төслийн хичээлийн 1 кредит хэдэн цагаас бүрдэх вэ?",
+    "reference_answer": "1 кредит нь танхимд суралцах 32 цаг, бие даан суралцах 16 цаг байна.",
+    "expected_source": "тушаал №199",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o199-diploma-duration",
+    "question": "Бакалаврын дипломын төслийг хэдэн улирлын турш гүйцэтгэхээр төлөвлөх вэ?",
+    "reference_answer": "Багшийн удирдлагаар 2 хүртэл улирлын турш гүйцэтгэхээр төлөвлөнө.",
+    "expected_source": "тушаал №199",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-o199-masters-credits",
+    "question": "Бакалаврын оюутан магистрын түвшний хичээл судлахын тулд ямар шаардлага хангах ёстой вэ?",
+    "reference_answer": "Ерөнхий суурь, мэргэжлийн суурийн хичээлийг бүрэн судалсан, 2.50 ба түүнээс дээш голч дүнтэй оюутан магистрын түвшний 12 хүртэлх кредит цагийн хичээл судалж болно.",
+    "expected_source": "тушаал №199",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-jr-effective",
+    "question": "MUST Journal of Science and Technology сэтгүүлийн журмыг хэзээнээс эхлэн мөрдсөн бэ?",
+    "reference_answer": "2025 оны 11 дүгээр сарын 10-ны өдрөөс эхлэн мөрдсөн.",
+    "expected_source": "сэтгүүл",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-jr-self-citation",
+    "question": "Сэтгүүлд бүтээл ирүүлэх зохиогч өөрийн бусад бүтээлээс авах эшлэл нийт эшлэлийн хэдэн хувиас хэтрэхгүй байх ёстой вэ?",
+    "reference_answer": "30 хувиас хэтрэхгүй байна.",
+    "expected_source": "сэтгүүл",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-jr-editor-term",
+    "question": "Сэтгүүлийн редакцын зөвлөлийн дарга, нарийн бичгийн даргыг хэдэн жил тутам сонгодог вэ?",
+    "reference_answer": "Редакцын зөвлөлийн гишүүдээс 3 жил тутам ээлжлэн сонгож ажиллуулна.",
+    "expected_source": "сэтгүүл",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-jr-review-deadline",
+    "question": "Хөндлөнгийн хянан магадалгааны шүүмжийг хэдэн долоо хоногийн дотор зохиогчид хүргүүлэх ба зохиогч хэдэн долоо хоногт засвар хийх вэ?",
+    "reference_answer": "Редакцын зөвлөл 4 долоо хоногийн дотор шүүмжийг хүргүүлж, зохиогч шүүмж хүргүүлсэн өдрөөс 2 долоо хоногийн дотор засвар хийнэ.",
+    "expected_source": "сэтгүүл",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-jr-board-approval",
+    "question": "Сэтгүүлийн редакцын зөвлөлийг хэн, юугаар баталгаажуулдаг вэ?",
+    "reference_answer": "ШУТИС-ийн ректорын тушаалаар баталгаажуулна.",
+    "expected_source": "сэтгүүл",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-metro",
+    "question": "Улаанбаатарын метро хэзээ ашиглалтад орох вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-python",
+    "question": "Python хэл дээр for давталт хэрхэн бичих вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-bitcoin",
+    "question": "Биткойны өнөөдрийн ханш хэд вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-num-exam",
+    "question": "МУИС-ийн элсэлтийн шалгалт хэзээ болох вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-everest",
+    "question": "Дэлхийн хамгийн өндөр уул аль нь вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-milktea",
+    "question": "Сүүтэй цайг хэрхэн чанах вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-messi",
+    "question": "Мессигийн карьерын нийт гоолын тоо хэд вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-iphone",
+    "question": "Айфон 17-ийн үнэ Монголд хэд вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-president",
+    "question": "Монгол Улсын одоогийн Ерөнхийлөгч хэн бэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-bank",
+    "question": "Хамгийн бага зээлийн хүүтэй банк аль нь вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-harvard",
+    "question": "Харвардын их сургуулийн жилийн сургалтын төлбөр хэд вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-dorm-fee",
+    "question": "ШУТИС-ийн оюутны байрны нэг сарын төлбөр хэд вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-rector-phone",
+    "question": "ШУТИС-ийн ректорын утасны дугаар хэд вэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "exp-refuse-lyrics",
+    "question": "Монгол улсын төрийн дууллын үгийг бүтнээр нь бичиж өгөөч.",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "app": { "name": "MUST Assistant", "tagline": "Ask about university rules and policies" },
+  "common": {
+    "loading": "Loading…", "save": "Save", "cancel": "Cancel", "delete": "Delete", "close": "Close",
+    "confirm": "Confirm", "search": "Search", "yes": "Yes", "no": "No", "back": "Back",
+    "error": "Something went wrong", "retry": "Retry", "notFound": "Page not found",
+    "theme": "Appearance", "light": "Light", "dark": "Dark", "system": "System", "language": "Language",
+    "signOut": "Sign out", "pages": "p.", "page": "page", "unknown": "—"
+  },
+  "auth": {
+    "signIn": "Sign in", "register": "Create account", "email": "Email", "password": "Password", "name": "Name",
+    "nameHint": "Optional", "passwordHint": "At least 8 characters",
+    "noAccount": "No account yet?", "haveAccount": "Already have an account?",
+    "welcome": "Welcome", "subtitle": "Ask about regulations, admissions, and grading."
+  },
+  "nav": { "newChat": "New chat", "chats": "Chats", "documents": "Documents", "admin": "Admin", "menu": "Menu", "noChats": "No chats yet" },
+  "chat": {
+    "placeholder": "Ask a question…", "send": "Send", "hint": "Enter to send · Shift+Enter for a new line",
+    "greeting": "What would you like to know?", "greetingSub": "Answers come only from the university's official documents.",
+    "searching": "Searching the documents…", "generating": "Writing the answer…",
+    "sources": "Sources", "refused": "The documents don't cover this question.",
+    "error": "Couldn't get an answer. Please try again.", "rename": "Rename", "deleteChat": "Delete chat",
+    "deleteConfirm": "Delete this chat? This can't be undone.", "untitled": "New chat",
+    "suggestions": [
+      "How many points do I need for an A grade?",
+      "What happens if my semester GPA is below 1.00?",
+      "When is registration for the student-soldier programme?"
+    ]
+  },
+  "viewer": {
+    "view": "View source", "citedPages": "Cited pages", "prev": "Previous page", "next": "Next page",
+    "openPdf": "Open PDF", "missing": "This document is no longer in the knowledge base.", "pageError": "Couldn't load this page."
+  },
+  "documents": {
+    "title": "Documents", "subtitle": "The assistant answers only from these official documents.",
+    "empty": "No documents yet.", "pages": "{count} pages", "chunks": "{count} chunks",
+    "category": "Category", "effective": "Effective", "uploaded": "Added",
+    "categories": { "handbook": "Handbook", "regulation": "Regulation", "journal": "Journal", "other": "Other" },
+    "status": { "active": "Active", "deprecated": "Deprecated", "superseded": "Superseded" }
+  },
+  "admin": {
+    "title": "Administration", "forbidden": "You don't have access to this page.",
+    "tabs": { "documents": "Documents", "users": "Users", "audit": "Audit log" },
+    "upload": "Add document", "reingest": "Rebuild knowledge base",
+    "reingestConfirm": "Every document will be re-processed. This takes a few minutes. Continue?",
+    "reingestStarted": "Rebuild started", "uploadStarted": "Processing started",
+    "jobDone": "Finished", "jobFailed": "Failed", "jobRunning": "Processing…", "jobQueued": "Queued…",
+    "file": "PDF file", "fileHint": "PDF only, up to 50 MB", "titleField": "Title", "categoryField": "Category",
+    "effectiveDate": "Effective date", "expiryDate": "Expiry date", "supersedes": "Replaces document", "none": "None",
+    "forceOcr": "Force OCR", "actions": "Actions", "activate": "Activate", "deprecate": "Deprecate",
+    "supersede": "Supersede…", "supersedeBy": "Replaced by", "deleteDoc": "Delete",
+    "deleteConfirm": "Remove “{title}” from the knowledge base?", "deleteFile": "Also delete the PDF file",
+    "columns": { "title": "Title", "status": "Status", "pages": "Pages", "chunks": "Chunks", "effective": "Effective", "uploaded": "Added", "email": "Email", "name": "Name", "role": "Role", "joined": "Joined", "action": "Action", "target": "Target", "when": "When", "by": "By" },
+    "roles": { "user": "Student", "admin": "Admin" }, "makeAdmin": "Make admin", "removeAdmin": "Remove admin",
+    "lastAdmin": "The last admin can't be demoted.", "roleUpdated": "Role updated", "updated": "Updated", "deleted": "Deleted"
+  }
+}

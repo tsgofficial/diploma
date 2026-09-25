@@ -1,0 +1,5030 @@
+{
+  "summary": {
+    "n_items": 64,
+    "in_scope_min_top_score": 0.483,
+    "out_of_scope_max_top_score": 0.6935,
+    "refusal_accuracy_pct": 93.8,
+    "retrieval_accuracy_pct": 100.0,
+    "retrieval_top1_pct": 93.5,
+    "answer_correctness_pct": NaN,
+    "n_judged": 0,
+    "retrieval_by_doc": {
+      "тушаал №199": 100.0,
+      "гарын авлага 2022": 100.0,
+      "ШУТИС дүрэм 2022 (web)": 100.0,
+      "ШУТИС тушаал №199 (2025-06-06)": 100.0,
+      "Тушаал №27 (2025-2026 хичээлийн жил)": 100.0,
+      "Шинэ оюутанд зориулсан гарын авлага 2022": 100.0,
+      "ШУТИС сэтгүүл": 100.0,
+      "2030 хөтөлбөрийн гарын авлага": 100.0,
+      "дүрэм 2022": 100.0,
+      "2030": 100.0,
+      "Тушаал №27": 100.0,
+      "сэтгүүл": 100.0
+    },
+    "hybrid": true,
+    "rerank": false,
+    "label": "hybrid"
+  },
+  "results": [
+    {
+      "id": "seed-grade-breakdown",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Оюутны хичээлийн дүнг нийт хэдэн оноогоор үнэлдэг вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "тушаал №199",
+      "top_score": 0.7077665625660112,
+      "dense_top_score": 0.7077665625660112,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            10
+          ],
+          "dense": 0.6969,
+          "sparse": 0.1694,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "АРАВ. ОЮУТНЫ МЭДЛЭГИЙН ҮНЭЛГЭЭ",
+          "pages": [
+            15,
+            16
+          ],
+          "dense": 0.7078,
+          "sparse": 0.104,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            9
+          ],
+          "dense": 0.6865,
+          "sparse": 0.1545,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "12.5.1. Хичээлийн агуулга, суралцахуйн үр дүнгийн,Хувьдэа",
+          "pages": [
+            25,
+            25
+          ],
+          "dense": 0.6472,
+          "sparse": 0.1547,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            10,
+            10
+          ],
+          "dense": 0.6808,
+          "sparse": 0.1288,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": false,
+      "correctness": null
+    },
+    {
+      "id": "seed-grade-A",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "A үнэлгээ авахын тулд хэдэн оноо авах ёстой вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.619246042459566,
+      "dense_top_score": 0.619246042459566,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            9
+          ],
+          "dense": 0.6163,
+          "sparse": 0.1552,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            10,
+            10
+          ],
+          "dense": 0.6192,
+          "sparse": 0.1269,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "АРАВ. ОЮУТНЫ МЭДЛЭГИЙН ҮНЭЛГЭЭ",
+          "pages": [
+            15,
+            16
+          ],
+          "dense": 0.6056,
+          "sparse": 0.1358,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            10
+          ],
+          "dense": 0.5865,
+          "sparse": 0.1159,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "11. Инженерийн ахисан түвшний сургууль",
+          "pages": [
+            9,
+            9
+          ],
+          "dense": 0.5655,
+          "sparse": 0.1244,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "seed-grade-lowest",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Хамгийн доод буюу унасан үнэлгээ юу вэ, хэдэн голч оноотой вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.5750322431910013,
+      "dense_top_score": 0.5750322431910013,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            9
+          ],
+          "dense": 0.575,
+          "sparse": 0.1402,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            10
+          ],
+          "dense": 0.5408,
+          "sparse": 0.1311,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            18,
+            19
+          ],
+          "dense": 0.5071,
+          "sparse": 0.1368,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ЗӨВЛӨМЖ",
+          "pages": [
+            34,
+            35
+          ],
+          "dense": 0.5136,
+          "sparse": 0.1281,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            10,
+            10
+          ],
+          "dense": 0.5143,
+          "sparse": 0.1035,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "seed-grade-Aminus",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "A- үнэлгээний онооны хязгаар болон голч оноо хэд вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.6633658914620222,
+      "dense_top_score": 0.6633658914620222,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            9
+          ],
+          "dense": 0.6634,
+          "sparse": 0.1957,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            10
+          ],
+          "dense": 0.6151,
+          "sparse": 0.144,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            18,
+            18
+          ],
+          "dense": 0.5975,
+          "sparse": 0.1512,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            10,
+            10
+          ],
+          "dense": 0.5937,
+          "sparse": 0.1482,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "АРАВ. ОЮУТНЫ МЭДЛЭГИЙН ҮНЭЛГЭЭ",
+          "pages": [
+            16,
+            17
+          ],
+          "dense": 0.6054,
+          "sparse": 0.1254,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "seed-refuse-flight",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Улаанбаатараас Токио хүрэх онгоцны тийзний үнэ хэд вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.4951430184897989,
+      "dense_top_score": 0.4951430184897989,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ЗАМЫН ЗАРДЛЫН НӨХӨН ОЛГОЛТ",
+          "pages": [
+            27,
+            27
+          ],
+          "dense": 0.4889,
+          "sparse": 0.0526,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.4951,
+          "sparse": 0.0323,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.4748,
+          "sparse": 0.0432,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": null,
+          "pages": [
+            1,
+            2
+          ],
+          "dense": 0.3195,
+          "sparse": 0.0508,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ГАРЫН АВЛАГА",
+          "pages": [
+            1,
+            1
+          ],
+          "dense": 0.3634,
+          "sparse": 0.0489,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "seed-refuse-recipe",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Гуляшийн жор бичиж өгөөч.",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "ШУТИС дүрэм 2022 (web)",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.4686012633094434,
+      "dense_top_score": 0.4686012633094434,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "\\ОСҮА, КНЗ\\",
+          "pages": [
+            18,
+            18
+          ],
+          "dense": 0.3532,
+          "sparse": 0.0568,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ГУРАВ. НЭР ТОМЬЁОНЫ ТОДОРХОЙЛОЛТ",
+          "pages": [
+            8,
+            9
+          ],
+          "dense": 0.4686,
+          "sparse": 0.0142,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "1. Багш судлаачдыг сонгон",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.3793,
+          "sparse": 0.0486,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.463,
+          "sparse": 0.0043,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ХҮРЭХ ҮР ДҮН",
+          "pages": [
+            26,
+            26
+          ],
+          "dense": 0.4604,
+          "sparse": 0.0203,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "seed-refuse-weather",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Маргааш Улаанбаатарт цаг агаар ямар байх вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.4790640959290186,
+      "dense_top_score": 0.4790640959290186,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ХАВРЫН УЛИРАЛ",
+          "pages": [
+            16,
+            16
+          ],
+          "dense": 0.4791,
+          "sparse": 0.0248,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ШУТИС-ИЙН ТАНИЛЦУУЛГА",
+          "pages": [
+            7,
+            8
+          ],
+          "dense": 0.342,
+          "sparse": 0.0756,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "3 Цагдаагийн ерөнхий газар",
+          "pages": [
+            14,
+            14
+          ],
+          "dense": 0.4504,
+          "sparse": 0.0494,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": null,
+          "pages": [
+            1,
+            2
+          ],
+          "dense": 0.3666,
+          "sparse": 0.0634,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "XII XIII",
+          "pages": [
+            17,
+            18
+          ],
+          "dense": 0.466,
+          "sparse": 0.0,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "seed-refuse-celebrity",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "2026 оны дэлхийн шатрын аварга хэн бэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.3932661474313264,
+      "dense_top_score": 0.3932661474313264,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "НАЙМ. ЭЛСЭЛТИЙН БҮРТГЭЛ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.3835,
+          "sparse": 0.0917,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ХОЁР. ХАМРАХ ХҮРЭЭ",
+          "pages": [
+            3,
+            3
+          ],
+          "dense": 0.3904,
+          "sparse": 0.0788,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ШУТИС",
+          "pages": [
+            18,
+            19
+          ],
+          "dense": 0.3933,
+          "sparse": 0.0574,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.3803,
+          "sparse": 0.0732,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ДОЛОО. БҮРТГҮҮЛЭГЧИД ТАВИХ ШААРДЛАГА",
+          "pages": [
+            7,
+            7
+          ],
+          "dense": 0.3526,
+          "sparse": 0.0815,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "gen-001",
+      "category": "in-scope",
+      "origin": "generated",
+      "question": "Сургалтын нэгдсэн хуанлид ямар сургалтын түвшний процессуудыг тусгах вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС дүрэм 2022 (web)",
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "ШУТИС дүрэм 2022 (web)",
+      "top_score": 0.6230649686227779,
+      "dense_top_score": 0.6230649686227779,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "НАЙМ. ҮЙЛ АЖИЛЛАГАА",
+          "pages": [
+            33,
+            33
+          ],
+          "dense": 0.6231,
+          "sparse": 0.1403,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ЗУРГАА. СУРГАЛТЫН ЗОХИОН БАЙГУУЛАЛТ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.5857,
+          "sparse": 0.1566,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "10.40.1. Явцын шалгалтаар хичээлийн явц",
+          "pages": [
+            21,
+            21
+          ],
+          "dense": 0.5905,
+          "sparse": 0.1043,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ТАВ. ОРОЛЦОГЧ ТАЛУУДЫН ЧИГ ҮҮРЭГ",
+          "pages": [
+            7,
+            7
+          ],
+          "dense": 0.5378,
+          "sparse": 0.1345,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            10,
+            11
+          ],
+          "dense": 0.5707,
+          "sparse": 0.1004,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "gen-002",
+      "category": "in-scope",
+      "origin": "generated",
+      "question": "Бакалаврын дипломын төсөл бүхий хичээл, дадлага, төсөл нь хэдээс хэдэн дугаарын хооронд байрлах вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "ШУТИС тушаал №199 (2025-06-06)",
+      "top_score": 0.6401967237877575,
+      "dense_top_score": 0.6401967237877575,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            11,
+            11
+          ],
+          "dense": 0.6372,
+          "sparse": 0.1464,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ДӨРӨВ. БУСАД",
+          "pages": [
+            15,
+            15
+          ],
+          "dense": 0.6402,
+          "sparse": 0.0465,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.6137,
+          "sparse": 0.0906,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ДӨРӨВ. НЭР ТОМЬЁОНЫ ТОДОРХОЙЛОЛТ",
+          "pages": [
+            5,
+            6
+          ],
+          "dense": 0.5823,
+          "sparse": 0.1077,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.6049,
+          "sparse": 0.0974,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "gen-003",
+      "category": "in-scope",
+      "origin": "generated",
+      "question": "Бүртгүүлэгч элсэлтийн бүртгэл хаах хугацаанаас өмнө сонгосон хөтөлбөрийн жагсаалтыг хэдэн удаа өөрчилж болох вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "Тушаал №27 (2025-2026 хичээлийн жил)",
+      "top_score": 0.6945473726133571,
+      "dense_top_score": 0.6945473726133571,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "НАЙМ. ЭЛСЭЛТИЙН БҮРТГЭЛ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.6945,
+          "sparse": 0.3139,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН НЭГ. ХӨТӨЛБӨР СОНГОЛТ, БАТАЛГААЖУУЛАЛТ",
+          "pages": [
+            10,
+            11
+          ],
+          "dense": 0.691,
+          "sparse": 0.1257,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН НЭГ. ХӨТӨЛБӨР СОНГОЛТ, БАТАЛГААЖУУЛАЛТ",
+          "pages": [
+            10,
+            10
+          ],
+          "dense": 0.6272,
+          "sparse": 0.1285,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "НАЙМ. ЭЛСЭЛТИЙН БҮРТГЭЛ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.5944,
+          "sparse": 0.1603,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН НЭГ. ХӨТӨЛБӨР СОНГОЛТ, БАТАЛГААЖУУЛАЛТ",
+          "pages": [
+            10,
+            10
+          ],
+          "dense": 0.6138,
+          "sparse": 0.1407,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "gen-004",
+      "category": "in-scope",
+      "origin": "generated",
+      "question": "10 дугаар сарын 03-наас 07-ны хооронд ямар аян зохион байгуулагдах вэ?",
+      "answer": null,
+      "sources": [
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "Шинэ оюутанд зориулсан гарын авлага 2022",
+      "top_score": 0.5415126586724884,
+      "dense_top_score": 0.5415126586724884,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "VII VIII IX",
+          "pages": [
+            17,
+            17
+          ],
+          "dense": 0.519,
+          "sparse": 0.1263,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "3 Цагдаагийн ерөнхий газар",
+          "pages": [
+            14,
+            14
+          ],
+          "dense": 0.5415,
+          "sparse": 0.093,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ХАВРЫН УЛИРАЛ",
+          "pages": [
+            16,
+            16
+          ],
+          "dense": 0.5128,
+          "sparse": 0.1128,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "1 Клубүүдийн нэгдсэн зөвлөл",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.4938,
+          "sparse": 0.0905,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "3 Цагдаагийн ерөнхий газар",
+          "pages": [
+            14,
+            14
+          ],
+          "dense": 0.499,
+          "sparse": 0.0345,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "gen-005",
+      "category": "in-scope",
+      "origin": "generated",
+      "question": "Сэтгүүлд ирүүлсэн бүтээлд тусгай дугаарыг ямар хэлбэрээр өгөх вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС сэтгүүл"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "ШУТИС сэтгүүл",
+      "top_score": 0.6863345862276912,
+      "dense_top_score": 0.6863345862276912,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "4.7. Редакцын зөвлөл дараах үйл ажиллагаа",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.6863,
+          "sparse": 0.2152,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "БҮТЭЭЛ ХҮЛЭЭН АВАХ",
+          "pages": [
+            4,
+            5
+          ],
+          "dense": 0.5916,
+          "sparse": 0.1433,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "4.7. Редакцын зөвлөл дараах үйл ажиллагаа",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.5866,
+          "sparse": 0.1337,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "БҮТЭЭЛ ХҮЛЭЭН АВАХ",
+          "pages": [
+            4,
+            4
+          ],
+          "dense": 0.5903,
+          "sparse": 0.1333,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "БҮТЭЭЛ ХҮЛЭЭН АВАХ",
+          "pages": [
+            4,
+            4
+          ],
+          "dense": 0.5768,
+          "sparse": 0.0983,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "gen-006",
+      "category": "in-scope",
+      "origin": "generated",
+      "question": "Багш, судлаачдыг олон улсын хурал, семинар, форум, зөвлөгөөн, симпозиумд оролцуулахыг дэмжихээс гадна ямар үзүүлэлтүүдийг хэмжих вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "2030 хөтөлбөрийн гарын авлага",
+      "top_score": 0.66097556936484,
+      "dense_top_score": 0.66097556936484,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ТЭРГҮҮЛЭХ ЧИГЛЭЛ – 2: СУДАЛГААНЫ ТӨГӨЛДӨРШИЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.627,
+          "sparse": 0.1487,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "4. Олон улсын солилцооны",
+          "pages": [
+            23,
+            23
+          ],
+          "dense": 0.661,
+          "sparse": 0.0815,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "3. Багш, судлаачдын ажлын",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.6586,
+          "sparse": 0.0793,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ИННОВАЦИ, ТЕХНОЛОГИ АРИЛЖААЛАЛТ",
+          "pages": [
+            16,
+            16
+          ],
+          "dense": 0.5562,
+          "sparse": 0.135,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "1. Багш судлаачдыг сонгон",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.6189,
+          "sparse": 0.0877,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-hb-travel-provinces",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Замын зардал нөхөн авахад ямар аймгуудаас суралцаж буй оюутнууд хамаарах вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.7180158433335304,
+      "dense_top_score": 0.7180158433335304,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ЗАМЫН ЗАРДЛЫН НӨХӨН ОЛГОЛТ",
+          "pages": [
+            27,
+            27
+          ],
+          "dense": 0.718,
+          "sparse": 0.2142,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ЗАМЫН ЗАРДЛЫН НӨХӨН ОЛГОЛТ",
+          "pages": [
+            27,
+            27
+          ],
+          "dense": 0.6344,
+          "sparse": 0.1063,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ХАВРЫН УЛИРАЛ",
+          "pages": [
+            16,
+            16
+          ],
+          "dense": 0.584,
+          "sparse": 0.1913,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "11.23.2. Сургалтын явцыг шалтгаангүйгээр",
+          "pages": [
+            24,
+            24
+          ],
+          "dense": 0.5553,
+          "sparse": 0.088,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            13
+          ],
+          "dense": 0.5679,
+          "sparse": 0.0734,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-hb-RW-score",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "R болон W тэмдэглэгээнд харгалзах үнэлгээний оноо хэд вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.6289446566444494,
+      "dense_top_score": 0.6289446566444494,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            10,
+            10
+          ],
+          "dense": 0.6289,
+          "sparse": 0.2503,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            10
+          ],
+          "dense": 0.6058,
+          "sparse": 0.1927,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "АРАВ. ОЮУТНЫ МЭДЛЭГИЙН ҮНЭЛГЭЭ",
+          "pages": [
+            15,
+            16
+          ],
+          "dense": 0.5637,
+          "sparse": 0.1247,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            18,
+            18
+          ],
+          "dense": 0.5174,
+          "sparse": 0.1361,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            20,
+            20
+          ],
+          "dense": 0.5505,
+          "sparse": 0.1205,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-hb-W-meaning",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Дүнгийн хуудсан дээрх W тэмдэглэгээ юу гэсэн утгатай вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.4829900596767234,
+      "dense_top_score": 0.4829900596767234,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            10,
+            10
+          ],
+          "dense": 0.483,
+          "sparse": 0.1231,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            10
+          ],
+          "dense": 0.4764,
+          "sparse": 0.1086,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            19,
+            19
+          ],
+          "dense": 0.459,
+          "sparse": 0.1008,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            19,
+            19
+          ],
+          "dense": 0.4457,
+          "sparse": 0.0999,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            20,
+            20
+          ],
+          "dense": 0.4432,
+          "sparse": 0.0916,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": false,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-hb-state-support",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Төрөөс үзүүлэх санхүүгийн дэмжлэгт ШУТИС-ийн ямар суралцагчид хамрагдах вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.8047596213021031,
+      "dense_top_score": 0.8047596213021031,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТНЫ ТЭТГЭЛЭГ, САНХҮҮГИЙН ДЭМЖЛЭГ",
+          "pages": [
+            25,
+            25
+          ],
+          "dense": 0.8048,
+          "sparse": 0.3373,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТНЫ ТЭТГЭЛЭГ, САНХҮҮГИЙН ДЭМЖЛЭГ",
+          "pages": [
+            24,
+            25
+          ],
+          "dense": 0.7517,
+          "sparse": 0.2886,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ГАДААД, ДОТООД ТЭТГЭЛЭГ, ХӨТӨЛБӨР",
+          "pages": [
+            26,
+            26
+          ],
+          "dense": 0.6695,
+          "sparse": 0.1889,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ТАВ. ОРОЛЦОГЧ ТАЛУУДЫН ЧИГ ҮҮРЭГ",
+          "pages": [
+            7,
+            8
+          ],
+          "dense": 0.6074,
+          "sparse": 0.2015,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ЗАМЫН ЗАРДЛЫН НӨХӨН ОЛГОЛТ",
+          "pages": [
+            27,
+            27
+          ],
+          "dense": 0.6455,
+          "sparse": 0.0852,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-hb-toyota",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "ШУТИС-Тоёото сангийн тэтгэлгийн бүртгэл хэзээ явагддаг вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.6657266474735004,
+      "dense_top_score": 0.6657266474735004,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ШУТИС",
+          "pages": [
+            26,
+            27
+          ],
+          "dense": 0.6657,
+          "sparse": 0.2145,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "НАЙМ. ЭЛСЭЛТИЙН БҮРТГЭЛ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.6372,
+          "sparse": 0.1448,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТНЫ ТЭТГЭЛЭГ, САНХҮҮГИЙН ДЭМЖЛЭГ",
+          "pages": [
+            24,
+            25
+          ],
+          "dense": 0.6223,
+          "sparse": 0.1559,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "3 Цагдаагийн ерөнхий газар",
+          "pages": [
+            14,
+            14
+          ],
+          "dense": 0.553,
+          "sparse": 0.1628,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "НАЙМ. ЭЛСЭЛТИЙН БҮРТГЭЛ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.6244,
+          "sparse": 0.1033,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-hb-student-soldier",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Оюутан цэрэг хөтөлбөрийн бүртгэл хэзээ явагдах вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.607703428242778,
+      "dense_top_score": 0.607703428242778,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТАН ДЭМЖИХ ҮЙЛЧИЛГЭЭ",
+          "pages": [
+            30,
+            30
+          ],
+          "dense": 0.6077,
+          "sparse": 0.2088,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ХАВРЫН УЛИРАЛ",
+          "pages": [
+            16,
+            16
+          ],
+          "dense": 0.5094,
+          "sparse": 0.1726,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТАН ДЭМЖИХ ҮЙЛЧИЛГЭЭ",
+          "pages": [
+            29,
+            29
+          ],
+          "dense": 0.5395,
+          "sparse": 0.096,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "VII VIII IX",
+          "pages": [
+            17,
+            17
+          ],
+          "dense": 0.5127,
+          "sparse": 0.1183,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "НАЙМ. ЭЛСЭЛТИЙН БҮРТГЭЛ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.5129,
+          "sparse": 0.1107,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-hb-insurance",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "19 насанд хүрсэн суралцагч эрүүл мэндийн даатгалын шимтгэлд хэдэн төгрөг төлөх вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.7136352350437231,
+      "dense_top_score": 0.7136352350437231,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТАН ДЭМЖИХ ҮЙЛЧИЛГЭЭ",
+          "pages": [
+            30,
+            30
+          ],
+          "dense": 0.7136,
+          "sparse": 0.2561,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТАН ДЭМЖИХ ҮЙЛЧИЛГЭЭ",
+          "pages": [
+            30,
+            30
+          ],
+          "dense": 0.6166,
+          "sparse": 0.1276,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            11,
+            12
+          ],
+          "dense": 0.5728,
+          "sparse": 0.0954,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ХАВРЫН УЛИРАЛ",
+          "pages": [
+            16,
+            16
+          ],
+          "dense": 0.4816,
+          "sparse": 0.0944,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.5522,
+          "sparse": 0.0186,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-hb-edison",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Амжилттай суралцах зөвлөгөөнд Эдисоны ямар үгийг иш татсан бэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "гарын авлага 2022",
+      "top_score": 0.628164117418979,
+      "dense_top_score": 0.628164117418979,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "АМЖИЛТТАЙ СУРАЛЦАХ 10 ЗӨВЛӨГӨӨ",
+          "pages": [
+            2,
+            2
+          ],
+          "dense": 0.6282,
+          "sparse": 0.0703,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ЗӨВЛӨМЖ",
+          "pages": [
+            34,
+            34
+          ],
+          "dense": 0.5073,
+          "sparse": 0.0927,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            11,
+            11
+          ],
+          "dense": 0.4123,
+          "sparse": 0.0841,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "АМЖИЛТТАЙ СУРАЛЦАХ 10 ЗӨВЛӨГӨӨ",
+          "pages": [
+            2,
+            2
+          ],
+          "dense": 0.5361,
+          "sparse": 0.0418,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "АРВАН НЭГ. ОЮУТНЫ ШИЛЖИЛТ, ХӨДӨЛГӨӨН",
+          "pages": [
+            22,
+            22
+          ],
+          "dense": 0.3903,
+          "sparse": 0.0713,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-qm-effective-date",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "ШУТИС-ийн чанарын менежментийн тогтолцооны гарын авлагыг хэдний өдрөөс эхлэн мөрдсөн бэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС дүрэм 2022 (web)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "дүрэм 2022",
+      "top_score": 0.7560181457231754,
+      "dense_top_score": 0.7560181457231754,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": null,
+          "pages": [
+            1,
+            1
+          ],
+          "dense": 0.756,
+          "sparse": 0.3538,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "НЭГ. ХАМРАХ ХҮРЭЭ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.645,
+          "sparse": 0.2697,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "“ДЭЛХИЙД ҮНЭЛЭГДЭХ ОЮУНЫ ҮНЭ ЦЭНИЙГ БҮТЭЭНЭ.”",
+          "pages": [
+            5,
+            5
+          ],
+          "dense": 0.6437,
+          "sparse": 0.2376,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ТАВ. МАНЛАЙЛАЛ",
+          "pages": [
+            17,
+            17
+          ],
+          "dense": 0.6016,
+          "sparse": 0.2364,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ГУРАВ. НЭР ТОМЬЁОНЫ ТОДОРХОЙЛОЛТ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.5306,
+          "sparse": 0.2573,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-qm-order-number",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Чанарын менежментийн тогтолцооны гарын авлагыг ямар дугаартай тушаалаар баталсан бэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "ШУТИС дүрэм 2022 (web)",
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "дүрэм 2022",
+      "top_score": 0.6138867157306477,
+      "dense_top_score": 0.6138867157306477,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": null,
+          "pages": [
+            1,
+            1
+          ],
+          "dense": 0.6139,
+          "sparse": 0.27,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "1. Чанарын менежментийн тогтолцоог",
+          "pages": [
+            22,
+            22
+          ],
+          "dense": 0.5597,
+          "sparse": 0.2284,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "НЭГ. ХАМРАХ ХҮРЭЭ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.5226,
+          "sparse": 0.164,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ГУРАВ. НЭР ТОМЬЁОНЫ ТОДОРХОЙЛОЛТ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.4877,
+          "sparse": 0.1971,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "МОМСОНАМ",
+          "pages": [
+            1,
+            3
+          ],
+          "dense": 0.5328,
+          "sparse": 0.0787,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-qm-survey-newcomers",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Шинэ элсэгчдээс санал асуулгыг хэзээ, ямар түүврийн хэмжээтэй авдаг вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС дүрэм 2022 (web)",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "дүрэм 2022",
+      "top_score": 0.6147571503778544,
+      "dense_top_score": 0.6147571503778544,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ЕС. ГҮЙЦЭТГЭЛИЙН ҮНЭЛГЭЭ",
+          "pages": [
+            42,
+            42
+          ],
+          "dense": 0.6148,
+          "sparse": 0.1414,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "1 Клубүүдийн нэгдсэн зөвлөл",
+          "pages": [
+            12,
+            13
+          ],
+          "dense": 0.5706,
+          "sparse": 0.0612,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "10.40.1. Явцын шалгалтаар хичээлийн явц",
+          "pages": [
+            21,
+            21
+          ],
+          "dense": 0.5457,
+          "sparse": 0.1018,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            4,
+            4
+          ],
+          "dense": 0.5817,
+          "sparse": 0.0568,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            11,
+            11
+          ],
+          "dense": 0.5639,
+          "sparse": 0.0659,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-qm-top-management",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Чанарын менежментийн гарын авлагад ШУТИС-ийн дээд удирдлага гэж хэнийг ойлгох вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС дүрэм 2022 (web)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "дүрэм 2022",
+      "top_score": 0.6910048894268472,
+      "dense_top_score": 0.6910048894268472,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ТАВ. МАНЛАЙЛАЛ",
+          "pages": [
+            17,
+            17
+          ],
+          "dense": 0.691,
+          "sparse": 0.2166,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "13. Суралцагчдын",
+          "pages": [
+            19,
+            19
+          ],
+          "dense": 0.5859,
+          "sparse": 0.2229,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ЕС. ГҮЙЦЭТГЭЛИЙН ҮНЭЛГЭЭ",
+          "pages": [
+            46,
+            47
+          ],
+          "dense": 0.6447,
+          "sparse": 0.1611,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": null,
+          "pages": [
+            1,
+            1
+          ],
+          "dense": 0.5859,
+          "sparse": 0.2016,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ДӨРӨВ. БАЙГУУЛЛАГЫН ТӨЛӨВ БАЙДАЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.606,
+          "sparse": 0.175,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-qm-risk-methods",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Эрсдэл, боломжийг тодорхойлоход ямар шинжилгээний аргачлалуудыг хэрэглэж болох вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС дүрэм 2022 (web)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "дүрэм 2022",
+      "top_score": 0.676222450264668,
+      "dense_top_score": 0.676222450264668,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ЗУРГАА. ТӨЛӨВЛӨЛТ",
+          "pages": [
+            20,
+            20
+          ],
+          "dense": 0.6762,
+          "sparse": 0.2434,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ЗУРГАА. ТӨЛӨВЛӨЛТ",
+          "pages": [
+            20,
+            20
+          ],
+          "dense": 0.6032,
+          "sparse": 0.2061,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "5. Сонирхогч талуудын оролцоог нэмэгдүүлэх",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.5803,
+          "sparse": 0.188,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "5. Үйлчилгээний чанарт нөлөөлөх байдал",
+          "pages": [
+            22,
+            22
+          ],
+          "dense": 0.6002,
+          "sparse": 0.1449,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "1. Холбогдох хууль тогтоомжийн шаардлага",
+          "pages": [
+            21,
+            21
+          ],
+          "dense": 0.5941,
+          "sparse": 0.1459,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-2030-goal1",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "ШУТИС-ийн 2030 хөтөлбөрийн нэгдүгээр зорилго юу вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "ШУТИС дүрэм 2022 (web)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "2030",
+      "top_score": 0.7120419698610033,
+      "dense_top_score": 0.7120419698610033,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            3,
+            3
+          ],
+          "dense": 0.712,
+          "sparse": 0.2815,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            2,
+            3
+          ],
+          "dense": 0.6768,
+          "sparse": 0.2554,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            3,
+            7
+          ],
+          "dense": 0.6389,
+          "sparse": 0.2639,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            2,
+            2
+          ],
+          "dense": 0.6534,
+          "sparse": 0.2363,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ОРШИЛ",
+          "pages": [
+            5,
+            5
+          ],
+          "dense": 0.5989,
+          "sparse": 0.2191,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-2030-goal2",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "2030 хөтөлбөрийн судалгааны чиглэлийн зорилго юу вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "2030",
+      "top_score": 0.6207406598634684,
+      "dense_top_score": 0.6207406598634684,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "2. Судалгааны",
+          "pages": [
+            14,
+            14
+          ],
+          "dense": 0.5828,
+          "sparse": 0.2051,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "1. Судалгааны тэргүүлэх",
+          "pages": [
+            14,
+            14
+          ],
+          "dense": 0.6,
+          "sparse": 0.1966,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ТЭРГҮҮЛЭХ ЧИГЛЭЛ – 2: СУДАЛГААНЫ ТӨГӨЛДӨРШИЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.6207,
+          "sparse": 0.1244,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "1. Үндэсний болон олон",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.6029,
+          "sparse": 0.185,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            3,
+            3
+          ],
+          "dense": 0.5888,
+          "sparse": 0.1841,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-2030-goal4",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "2030 хөтөлбөрийн дөрөвдүгээр зорилго юу вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "2030",
+      "top_score": 0.5834161618081035,
+      "dense_top_score": 0.5834161618081035,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            3,
+            7
+          ],
+          "dense": 0.4949,
+          "sparse": 0.1834,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "4. Тулгамдсан асуудлаар бодлогын",
+          "pages": [
+            19,
+            19
+          ],
+          "dense": 0.5834,
+          "sparse": 0.094,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            3,
+            3
+          ],
+          "dense": 0.541,
+          "sparse": 0.1729,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "УЛАМЖЛАЛ",
+          "pages": [
+            7,
+            7
+          ],
+          "dense": 0.4649,
+          "sparse": 0.1823,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "3. Тогтвортой хөгжил, байгаль орчинд",
+          "pages": [
+            18,
+            18
+          ],
+          "dense": 0.5661,
+          "sparse": 0.1058,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-2030-asia100",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Төрөөс боловсролын талаар баримтлах бодлогын 7.13-т ямар зорилт дэвшүүлсэн бэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "ШУТИС дүрэм 2022 (web)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "2030",
+      "top_score": 0.5647094361940601,
+      "dense_top_score": 0.5647094361940601,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            2,
+            2
+          ],
+          "dense": 0.5647,
+          "sparse": 0.1513,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            2,
+            3
+          ],
+          "dense": 0.562,
+          "sparse": 0.2192,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "7.3.3 Хамаарах чанарын зорилтууд",
+          "pages": [
+            30,
+            30
+          ],
+          "dense": 0.5056,
+          "sparse": 0.1287,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "3. Тогтвортой хөгжил, байгаль орчинд",
+          "pages": [
+            18,
+            18
+          ],
+          "dense": 0.564,
+          "sparse": 0.0559,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "САЙН-ХҮМҮҮНЛЭГ ЗАСАГЛАЛ",
+          "pages": [
+            7,
+            10
+          ],
+          "dense": 0.5221,
+          "sparse": 0.0032,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o27-scholarship-776",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Элсэлтийн шалгалтад суурь болон дагалдах хичээл тус бүрд 776-800 оноо авсан элсэгчид ямар тэтгэлэг олгох вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "Тушаал №27",
+      "top_score": 0.6815304140801308,
+      "dense_top_score": 0.6815304140801308,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.6815,
+          "sparse": 0.332,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.6311,
+          "sparse": 0.2318,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.5951,
+          "sparse": 0.2169,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРАВ. ОНООНЫ ЖАГСААЛТ, ЭРЭМБЭЛЭЛТ",
+          "pages": [
+            9,
+            10
+          ],
+          "dense": 0.574,
+          "sparse": 0.2103,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.5714,
+          "sparse": 0.1623,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o27-scholarship-700",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "ЭШ-д хичээл тус бүрд 700-750 оноо авсан элсэгчид сургалтын төлбөрийн хэдэн хувийн тэтгэлэг авах вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "Тушаал №27",
+      "top_score": 0.7331546409227361,
+      "dense_top_score": 0.7331546409227361,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.7332,
+          "sparse": 0.3266,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.6247,
+          "sparse": 0.253,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.6178,
+          "sparse": 0.2073,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.6328,
+          "sparse": 0.1219,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.6021,
+          "sparse": 0.1896,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o27-open-selection",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Нээлттэй хэлбэрээр хөтөлбөр сонголтыг цахим системээр хэдий хүртэл явуулах вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "Тушаал №27",
+      "top_score": 0.6504107619501012,
+      "dense_top_score": 0.6504107619501012,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН НЭГ. ХӨТӨЛБӨР СОНГОЛТ, БАТАЛГААЖУУЛАЛТ",
+          "pages": [
+            10,
+            10
+          ],
+          "dense": 0.6504,
+          "sparse": 0.2366,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН НЭГ. ХӨТӨЛБӨР СОНГОЛТ, БАТАЛГААЖУУЛАЛТ",
+          "pages": [
+            10,
+            11
+          ],
+          "dense": 0.6411,
+          "sparse": 0.2089,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "5.7.2. Элсэлттэй холбоотой боловсролын",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.5593,
+          "sparse": 0.1727,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            11,
+            11
+          ],
+          "dense": 0.5447,
+          "sparse": 0.1694,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ЕС. ОЮУТНЫ ХИЧЭЭЛ СОНГОЛТ",
+          "pages": [
+            15,
+            15
+          ],
+          "dense": 0.5553,
+          "sparse": 0.127,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o27-regional-loan",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Орон нутагт үйл ажиллагаа явуулж байгаа ДаТС, ЭЦДС, ӨмТДС-д суралцагчид сургалтын төлбөрийн хэдэн хувьтай тэнцэх зээл олгох вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "Тушаал №27",
+      "top_score": 0.7691478894766077,
+      "dense_top_score": 0.7691478894766077,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.7691,
+          "sparse": 0.2533,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.6319,
+          "sparse": 0.1956,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.6398,
+          "sparse": 0.1642,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.6307,
+          "sparse": 0.1544,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ДӨРӨВ. НЭР ТОМЬЁОНЫ ТОДОРХОЙЛОЛТ",
+          "pages": [
+            5,
+            5
+          ],
+          "dense": 0.5487,
+          "sparse": 0.1743,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o27-olympiad-skill",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Ур чадварын шалгалтын оноог шууд тооцох олимпиадын шалгуур юу вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "Тушаал №27",
+      "top_score": 0.5926458226212693,
+      "dense_top_score": 0.5926458226212693,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ЕС. УР ЧАДВАРЫН ШАЛГАЛТ",
+          "pages": [
+            9,
+            9
+          ],
+          "dense": 0.5926,
+          "sparse": 0.2326,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ЕС. УР ЧАДВАРЫН ШАЛГАЛТ",
+          "pages": [
+            9,
+            9
+          ],
+          "dense": 0.522,
+          "sparse": 0.1801,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            19,
+            19
+          ],
+          "dense": 0.518,
+          "sparse": 0.1227,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            10,
+            10
+          ],
+          "dense": 0.4959,
+          "sparse": 0.1436,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            19,
+            19
+          ],
+          "dense": 0.5097,
+          "sparse": 0.1196,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o27-central-commission",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Элсэлтийн төв комисс ямар үүрэгтэй вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "Тушаал №27",
+      "top_score": 0.649886643997493,
+      "dense_top_score": 0.649886643997493,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ЗУРГАА. ЭЛСЭЛТИЙН КОМИСС",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.6346,
+          "sparse": 0.2031,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ТАВ. ЭРХ МЭДЭЛ, ҮҮРЭГ ХАРИУЦЛАГА",
+          "pages": [
+            4,
+            5
+          ],
+          "dense": 0.6499,
+          "sparse": 0.1874,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ТАВ. ЭРХ МЭДЭЛ, ҮҮРЭГ ХАРИУЦЛАГА",
+          "pages": [
+            5,
+            5
+          ],
+          "dense": 0.6032,
+          "sparse": 0.2009,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ТАВ. ЭРХ МЭДЭЛ, ҮҮРЭГ ХАРИУЦЛАГА",
+          "pages": [
+            5,
+            5
+          ],
+          "dense": 0.6192,
+          "sparse": 0.1596,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ДӨРӨВ. НЭР ТОМЬЁОНЫ ТОДОРХОЙЛОЛТ",
+          "pages": [
+            3,
+            4
+          ],
+          "dense": 0.5622,
+          "sparse": 0.1522,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o27-no-double",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Сургалтын төлбөрийн тэтгэлэг, урамшууллыг давхардуулж олгох уу?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС дүрэм 2022 (web)",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "Тушаал №27",
+      "top_score": 0.7134233138091299,
+      "dense_top_score": 0.7134233138091299,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "13.10.16. Бусад тэтгэлгүүд",
+          "pages": [
+            14,
+            14
+          ],
+          "dense": 0.7134,
+          "sparse": 0.2264,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.6251,
+          "sparse": 0.0955,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ХАМТАРСАН ХӨТӨЛБӨР",
+          "pages": [
+            14,
+            14
+          ],
+          "dense": 0.612,
+          "sparse": 0.1328,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "7. Оюутны дотуур байрны төлбөрийн мэдээлэл",
+          "pages": [
+            34,
+            34
+          ],
+          "dense": 0.5274,
+          "sparse": 0.1397,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТНЫ ТЭТГЭЛЭГ, САНХҮҮГИЙН ДЭМЖЛЭГ",
+          "pages": [
+            24,
+            25
+          ],
+          "dense": 0.6023,
+          "sparse": 0.1266,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o199-credits-load",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Оюутан үндсэн улиралд дунджаар хэдэн кредит судлах нь зохимжтой, дээд хэмжээ нь хэд вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "тушаал №199",
+      "top_score": 0.7534765575671496,
+      "dense_top_score": 0.7534765575671496,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ЕС. ОЮУТНЫ ХИЧЭЭЛ СОНГОЛТ",
+          "pages": [
+            15,
+            15
+          ],
+          "dense": 0.7535,
+          "sparse": 0.2469,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.5953,
+          "sparse": 0.1474,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.6085,
+          "sparse": 0.1287,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "12.5.1. Хичээлийн агуулга, суралцахуйн үр дүнгийн,Хувьдэа",
+          "pages": [
+            25,
+            26
+          ],
+          "dense": 0.6196,
+          "sparse": 0.0801,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            18,
+            18
+          ],
+          "dense": 0.5768,
+          "sparse": 0.1355,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o199-deans-list",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Захирлын нэрэмжит хуудсанд орохын тулд оюутан ямар шаардлага хангасан байх ёстой вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "тушаал №199",
+      "top_score": 0.6309751662390188,
+      "dense_top_score": 0.6309751662390188,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ГАДААД, ДОТООД ТЭТГЭЛЭГ, ХӨТӨЛБӨР",
+          "pages": [
+            26,
+            26
+          ],
+          "dense": 0.631,
+          "sparse": 0.181,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТАН ТАНД ШААРДЛАГАТАЙ ДҮРЭМ ЖУРАМ",
+          "pages": [
+            28,
+            28
+          ],
+          "dense": 0.5954,
+          "sparse": 0.1901,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТАН ТАНД ШААРДЛАГАТАЙ ДҮРЭМ ЖУРАМ",
+          "pages": [
+            28,
+            29
+          ],
+          "dense": 0.5895,
+          "sparse": 0.1605,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТНЫ ТЭТГЭЛЭГ, САНХҮҮГИЙН ДЭМЖЛЭГ",
+          "pages": [
+            24,
+            24
+          ],
+          "dense": 0.5822,
+          "sparse": 0.1292,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "АРВАН НЭГ. ОЮУТНЫ ШИЛЖИЛТ, ХӨДӨЛГӨӨН",
+          "pages": [
+            23,
+            23
+          ],
+          "dense": 0.5898,
+          "sparse": 0.0859,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": false,
+      "correctness": null
+    },
+    {
+      "id": "exp-o199-gpa-warning",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Улирлын үнэлгээний голч дүн 1.00 ба түүнээс доош бол оюутныг хэрхэн үзэх вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "тушаал №199",
+      "top_score": 0.6839991333852584,
+      "dense_top_score": 0.6839991333852584,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            18,
+            19
+          ],
+          "dense": 0.684,
+          "sparse": 0.3398,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            10
+          ],
+          "dense": 0.6644,
+          "sparse": 0.1946,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ЗӨВЛӨМЖ",
+          "pages": [
+            34,
+            35
+          ],
+          "dense": 0.6402,
+          "sparse": 0.2515,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            18,
+            18
+          ],
+          "dense": 0.6537,
+          "sparse": 0.1924,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            9
+          ],
+          "dense": 0.6623,
+          "sparse": 0.1577,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o199-E-makeup",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "E тэмдэглэгээтэй хичээлийн шалгалтыг хэрхэн, ямар хугацаанд нөхөн өгөх вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "тушаал №199",
+      "top_score": 0.6715303916672435,
+      "dense_top_score": 0.6715303916672435,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            19,
+            20
+          ],
+          "dense": 0.6715,
+          "sparse": 0.2558,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            20,
+            20
+          ],
+          "dense": 0.5832,
+          "sparse": 0.1819,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            20,
+            20
+          ],
+          "dense": 0.5877,
+          "sparse": 0.1618,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            20,
+            20
+          ],
+          "dense": 0.5409,
+          "sparse": 0.1967,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            10,
+            10
+          ],
+          "dense": 0.5793,
+          "sparse": 0.1613,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o199-project-credit-hours",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Төслийн хичээлийн 1 кредит хэдэн цагаас бүрдэх вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "тушаал №199",
+      "top_score": 0.7201766406155845,
+      "dense_top_score": 0.7201766406155845,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.7202,
+          "sparse": 0.1591,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ДӨРӨВ. НЭР ТОМЬЁОНЫ ТОДОРХОЙЛОЛТ",
+          "pages": [
+            5,
+            5
+          ],
+          "dense": 0.6624,
+          "sparse": 0.1614,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.7071,
+          "sparse": 0.1395,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.6593,
+          "sparse": 0.1376,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "12.5.1. Хичээлийн агуулга, суралцахуйн үр дүнгийн,Хувьдэа",
+          "pages": [
+            25,
+            26
+          ],
+          "dense": 0.5812,
+          "sparse": 0.1401,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o199-diploma-duration",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Бакалаврын дипломын төслийг хэдэн улирлын турш гүйцэтгэхээр төлөвлөх вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "тушаал №199",
+      "top_score": 0.6403656178325625,
+      "dense_top_score": 0.6403656178325625,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.6404,
+          "sparse": 0.174,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ЗУРГАА. СУРГАЛТЫН ЗОХИОН БАЙГУУЛАЛТ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.5845,
+          "sparse": 0.1007,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.5888,
+          "sparse": 0.0323,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ДОЛОО. ЭЛСЭЛТИЙН ҮЙЛ АЖИЛЛАГАА",
+          "pages": [
+            10,
+            10
+          ],
+          "dense": 0.5884,
+          "sparse": 0.0452,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "XIII XIV",
+          "pages": [
+            15,
+            15
+          ],
+          "dense": 0.5108,
+          "sparse": 0.0902,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-o199-masters-credits",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Бакалаврын оюутан магистрын түвшний хичээл судлахын тулд ямар шаардлага хангах ёстой вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "тушаал №199",
+      "top_score": 0.6076919233222711,
+      "dense_top_score": 0.6076919233222711,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТНЫ ТЭТГЭЛЭГ, САНХҮҮГИЙН ДЭМЖЛЭГ",
+          "pages": [
+            24,
+            24
+          ],
+          "dense": 0.6001,
+          "sparse": 0.1453,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТАН ТАНД ШААРДЛАГАТАЙ ДҮРЭМ ЖУРАМ",
+          "pages": [
+            27,
+            27
+          ],
+          "dense": 0.6077,
+          "sparse": 0.0701,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ЗУРГАА. СУРГАЛТЫН ЗОХИОН БАЙГУУЛАЛТ",
+          "pages": [
+            8,
+            9
+          ],
+          "dense": 0.5445,
+          "sparse": 0.1529,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ЗУРГАА. СУРГАЛТЫН ЗОХИОН БАЙГУУЛАЛТ",
+          "pages": [
+            9,
+            9
+          ],
+          "dense": 0.5799,
+          "sparse": 0.1362,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.5892,
+          "sparse": 0.1312,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": false,
+      "correctness": null
+    },
+    {
+      "id": "exp-jr-effective",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "MUST Journal of Science and Technology сэтгүүлийн журмыг хэзээнээс эхлэн мөрдсөн бэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС дүрэм 2022 (web)",
+        "ШУТИС сэтгүүл",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "сэтгүүл",
+      "top_score": 0.5857702707523209,
+      "dense_top_score": 0.5857702707523209,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ТУШААЛ",
+          "pages": [
+            1,
+            1
+          ],
+          "dense": 0.5858,
+          "sparse": 0.1677,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ТУШААЛ",
+          "pages": [
+            1,
+            1
+          ],
+          "dense": 0.5724,
+          "sparse": 0.1511,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТАН ТАНД ШААРДЛАГАТАЙ ДҮРЭМ ЖУРАМ",
+          "pages": [
+            28,
+            28
+          ],
+          "dense": 0.4879,
+          "sparse": 0.039,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ХОЁР. ХАМРАХ ХҮРЭЭ",
+          "pages": [
+            4,
+            4
+          ],
+          "dense": 0.4405,
+          "sparse": 0.1077,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": null,
+          "pages": [
+            1,
+            1
+          ],
+          "dense": 0.4849,
+          "sparse": 0.0502,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-jr-self-citation",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Сэтгүүлд бүтээл ирүүлэх зохиогч өөрийн бусад бүтээлээс авах эшлэл нийт эшлэлийн хэдэн хувиас хэтрэхгүй байх ёстой вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС сэтгүүл"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "сэтгүүл",
+      "top_score": 0.6565589679059433,
+      "dense_top_score": 0.6565589679059433,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ШААРДЛАГА",
+          "pages": [
+            7,
+            7
+          ],
+          "dense": 0.6566,
+          "sparse": 0.1718,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "НАЙМ. ЗОХИОГЧИЙН ЭРХ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.6119,
+          "sparse": 0.1374,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "БҮТЭЭЛ ХҮЛЭЭН АВАХ",
+          "pages": [
+            4,
+            4
+          ],
+          "dense": 0.5579,
+          "sparse": 0.1025,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "4.7. Редакцын зөвлөл дараах үйл ажиллагаа",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.576,
+          "sparse": 0.0905,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "НАЙМ. ЗОХИОГЧИЙН ЭРХ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.5661,
+          "sparse": 0.0933,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-jr-editor-term",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Сэтгүүлийн редакцын зөвлөлийн дарга, нарийн бичгийн даргыг хэдэн жил тутам сонгодог вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС сэтгүүл"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "сэтгүүл",
+      "top_score": 0.643737350225222,
+      "dense_top_score": 0.643737350225222,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ДӨРӨВ. РЕДАКЦЫН ЗӨВЛӨЛ",
+          "pages": [
+            5,
+            5
+          ],
+          "dense": 0.6437,
+          "sparse": 0.182,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "4.7. Редакцын зөвлөл дараах үйл ажиллагаа",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.5569,
+          "sparse": 0.1311,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ШМУЕКЗТҮ ОР",
+          "pages": [
+            7,
+            7
+          ],
+          "dense": 0.5287,
+          "sparse": 0.1107,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "4.7. Редакцын зөвлөл дараах үйл ажиллагаа",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.4962,
+          "sparse": 0.1234,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ШМУЕКЗТҮ ОР",
+          "pages": [
+            7,
+            7
+          ],
+          "dense": 0.5117,
+          "sparse": 0.1086,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-jr-review-deadline",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Хөндлөнгийн хянан магадалгааны шүүмжийг хэдэн долоо хоногийн дотор зохиогчид хүргүүлэх ба зохиогч хэдэн долоо хоногт засвар хийх вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС сэтгүүл"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "сэтгүүл",
+      "top_score": 0.6922524755035377,
+      "dense_top_score": 0.6922524755035377,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "БҮТЭЭЛ ХҮЛЭЭН АВАХ",
+          "pages": [
+            4,
+            4
+          ],
+          "dense": 0.6524,
+          "sparse": 0.2005,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ШМУЕКЗТҮ ОР",
+          "pages": [
+            7,
+            7
+          ],
+          "dense": 0.6923,
+          "sparse": 0.1789,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ШААРДЛАГА",
+          "pages": [
+            7,
+            7
+          ],
+          "dense": 0.6312,
+          "sparse": 0.1921,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "4.7. Редакцын зөвлөл дараах үйл ажиллагаа",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.6353,
+          "sparse": 0.1899,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ШМУЕКЗТҮ ОР",
+          "pages": [
+            7,
+            7
+          ],
+          "dense": 0.582,
+          "sparse": 0.1871,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-jr-board-approval",
+      "category": "in-scope",
+      "origin": "curated",
+      "question": "Сэтгүүлийн редакцын зөвлөлийг хэн, юугаар баталгаажуулдаг вэ?",
+      "answer": null,
+      "sources": [
+        "ШУТИС сэтгүүл"
+      ],
+      "refused": false,
+      "should_refuse": false,
+      "expected_source": "сэтгүүл",
+      "top_score": 0.6528784765702748,
+      "dense_top_score": 0.6528784765702748,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ДӨРӨВ. РЕДАКЦЫН ЗӨВЛӨЛ",
+          "pages": [
+            5,
+            5
+          ],
+          "dense": 0.6529,
+          "sparse": 0.1497,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "4.7. Редакцын зөвлөл дараах үйл ажиллагаа",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.621,
+          "sparse": 0.1108,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "4.7. Редакцын зөвлөл дараах үйл ажиллагаа",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.5658,
+          "sparse": 0.1226,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "4.7. Редакцын зөвлөл дараах үйл ажиллагаа",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.5909,
+          "sparse": 0.1166,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ДОЛОО. МЭДЭЭЛЛИЙН НУУЦЛАЛ",
+          "pages": [
+            7,
+            8
+          ],
+          "dense": 0.5519,
+          "sparse": 0.1147,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": true,
+      "top1_ok": true,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-metro",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Улаанбаатарын метро хэзээ ашиглалтад орох вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.49570805791342376,
+      "dense_top_score": 0.49570805791342376,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.4957,
+          "sparse": 0.061,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": null,
+          "pages": [
+            1,
+            2
+          ],
+          "dense": 0.3992,
+          "sparse": 0.0545,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.4637,
+          "sparse": 0.0313,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "НАЙМ. ЭЛСЭЛТИЙН БҮРТГЭЛ",
+          "pages": [
+            9,
+            9
+          ],
+          "dense": 0.4155,
+          "sparse": 0.0465,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ГАРЫН АВЛАГА",
+          "pages": [
+            1,
+            1
+          ],
+          "dense": 0.3793,
+          "sparse": 0.0525,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-python",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Python хэл дээр for давталт хэрхэн бичих вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.4372382688395007,
+      "dense_top_score": 0.4372382688395007,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ХАВСРАЛТ 2. ХАМТАРСАН ХӨТӨЛБӨРИЙН ЖАГСААЛТ",
+          "pages": [
+            26,
+            26
+          ],
+          "dense": 0.4372,
+          "sparse": 0.0,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "2 Танхимын",
+          "pages": [
+            9,
+            10
+          ],
+          "dense": 0.3408,
+          "sparse": 0.0335,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "АРВАН ХОЁР. ХИЧЭЭЛ ДҮЙЦҮҮЛЭН ТООЦОХ",
+          "pages": [
+            24,
+            24
+          ],
+          "dense": 0.4368,
+          "sparse": 0.0,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ОММЕВЗГТҮ ОР",
+          "pages": [
+            25,
+            25
+          ],
+          "dense": 0.3554,
+          "sparse": 0.0298,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ИРТ ЛЖХ",
+          "pages": [
+            19,
+            19
+          ],
+          "dense": 0.4323,
+          "sparse": 0.0,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-bitcoin",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Биткойны өнөөдрийн ханш хэд вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.4054923325243185,
+      "dense_top_score": 0.4054923325243185,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ЗӨВЛӨМЖ",
+          "pages": [
+            35,
+            35
+          ],
+          "dense": 0.313,
+          "sparse": 0.0439,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            9
+          ],
+          "dense": 0.4055,
+          "sparse": 0.0078,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.3965,
+          "sparse": 0.0,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "НАЙМ. СУРГАЛТЫН ХӨТӨЛБӨР, ТӨЛӨВЛӨГӨӨ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.2951,
+          "sparse": 0.0365,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": null,
+          "pages": [
+            1,
+            2
+          ],
+          "dense": 0.3072,
+          "sparse": 0.035,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-num-exam",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "МУИС-ийн элсэлтийн шалгалт хэзээ болох вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": false,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.6053496745810453,
+      "dense_top_score": 0.6053496745810453,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ДӨРӨВ. НЭР ТОМЬЁОНЫ ТОДОРХОЙЛОЛТ",
+          "pages": [
+            3,
+            4
+          ],
+          "dense": 0.6053,
+          "sparse": 0.1443,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ЗУРГАА. ЭЛСЭЛТИЙН КОМИСС",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.5411,
+          "sparse": 0.1499,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ДӨРӨВ. НЭР ТОМЬЁОНЫ ТОДОРХОЙЛОЛТ",
+          "pages": [
+            4,
+            4
+          ],
+          "dense": 0.5686,
+          "sparse": 0.1346,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "10.40.1. Явцын шалгалтаар хичээлийн явц",
+          "pages": [
+            21,
+            21
+          ],
+          "dense": 0.5742,
+          "sparse": 0.09,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "НАЙМ. ЭЛСЭЛТИЙН БҮРТГЭЛ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.5668,
+          "sparse": 0.1279,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": false,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-everest",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Дэлхийн хамгийн өндөр уул аль нь вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.35952846263764565,
+      "dense_top_score": 0.35952846263764565,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "СУРГАЛТЫН ХӨТӨЛБӨР",
+          "pages": [
+            22,
+            24
+          ],
+          "dense": 0.2913,
+          "sparse": 0.0722,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            2,
+            3
+          ],
+          "dense": 0.3595,
+          "sparse": 0.0008,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            3,
+            3
+          ],
+          "dense": 0.3354,
+          "sparse": 0.0012,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "10. Бизнесийн ахисан түвшний сургууль",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.2994,
+          "sparse": 0.0618,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ДӨРӨВ. НЭР ТОМЬЁОНЫ ТОДОРХОЙЛОЛТ",
+          "pages": [
+            6,
+            6
+          ],
+          "dense": 0.3233,
+          "sparse": 0.0,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-milktea",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Сүүтэй цайг хэрхэн чанах вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.3881896806262286,
+      "dense_top_score": 0.3881896806262286,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ОММЕВЗГТҮ ОР",
+          "pages": [
+            25,
+            25
+          ],
+          "dense": 0.3082,
+          "sparse": 0.0376,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "1. Чанарын менежментийн тогтолцоог",
+          "pages": [
+            22,
+            22
+          ],
+          "dense": 0.3882,
+          "sparse": 0.0019,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "АРВАН ХОЁР. ХИЧЭЭЛ ДҮЙЦҮҮЛЭН ТООЦОХ",
+          "pages": [
+            24,
+            25
+          ],
+          "dense": 0.3134,
+          "sparse": 0.0319,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "АМЖИЛТТАЙ СУРАЛЦАХ 10 ЗӨВЛӨГӨӨ",
+          "pages": [
+            2,
+            2
+          ],
+          "dense": 0.3864,
+          "sparse": 0.003,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "АРВАН ХОЁР. ХИЧЭЭЛ ДҮЙЦҮҮЛЭН ТООЦОХ",
+          "pages": [
+            24,
+            24
+          ],
+          "dense": 0.3196,
+          "sparse": 0.0279,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-messi",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Мессигийн карьерын нийт гоолын тоо хэд вэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.33042956718171107,
+      "dense_top_score": 0.33042956718171107,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ҮНЭЛГЭЭНИЙ ОНОО",
+          "pages": [
+            9,
+            9
+          ],
+          "dense": 0.3304,
+          "sparse": 0.0087,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "АРВАН НЭГ. ОЮУТНЫ ШИЛЖИЛТ, ХӨДӨЛГӨӨН",
+          "pages": [
+            22,
+            23
+          ],
+          "dense": 0.2179,
+          "sparse": 0.037,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "4. Гүйцэтгэл, чадамжид суурилсан",
+          "pages": [
+            21,
+            22
+          ],
+          "dense": 0.2533,
+          "sparse": 0.0363,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ШУТИС",
+          "pages": [
+            18,
+            19
+          ],
+          "dense": 0.316,
+          "sparse": 0.0,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ШУТИС",
+          "pages": [
+            19,
+            20
+          ],
+          "dense": 0.3147,
+          "sparse": 0.0,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-iphone",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Айфон 17-ийн үнэ Монголд хэд вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС дүрэм 2022 (web)",
+        "ШУТИС тушаал №199 (2025-06-06)"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.3981306275881347,
+      "dense_top_score": 0.3981306275881347,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.3981,
+          "sparse": 0.0029,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "6. Мэдлэгийг",
+          "pages": [
+            29,
+            29
+          ],
+          "dense": 0.2433,
+          "sparse": 0.0473,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.3918,
+          "sparse": 0.0003,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ЕС. ГҮЙЦЭТГЭЛИЙН ҮНЭЛГЭЭ",
+          "pages": [
+            42,
+            42
+          ],
+          "dense": 0.3301,
+          "sparse": 0.0469,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "АРАВ. ОЮУТНЫ МЭДЛЭГИЙН ҮНЭЛГЭЭ",
+          "pages": [
+            16,
+            17
+          ],
+          "dense": 0.3633,
+          "sparse": 0.0,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-president",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Монгол Улсын одоогийн Ерөнхийлөгч хэн бэ?",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.40014257877668613,
+      "dense_top_score": 0.40014257877668613,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": null,
+          "pages": [
+            1,
+            2
+          ],
+          "dense": 0.3731,
+          "sparse": 0.0575,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            3,
+            7
+          ],
+          "dense": 0.4001,
+          "sparse": 0.0351,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            2,
+            2
+          ],
+          "dense": 0.3901,
+          "sparse": 0.0433,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ГАДААД, ДОТООД ТЭТГЭЛЭГ, ХӨТӨЛБӨР",
+          "pages": [
+            26,
+            26
+          ],
+          "dense": 0.3972,
+          "sparse": 0.0244,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ТЭРГҮҮЛЭХ ЧИГЛЭЛ – 2: СУДАЛГААНЫ ТӨГӨЛДӨРШИЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.3337,
+          "sparse": 0.0485,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-bank",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Хамгийн бага зээлийн хүүтэй банк аль нь вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.4343266893785521,
+      "dense_top_score": 0.4343266893785521,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ШУТИС",
+          "pages": [
+            26,
+            27
+          ],
+          "dense": 0.4343,
+          "sparse": 0.0362,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.4005,
+          "sparse": 0.049,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ЗАМЫН ЗАРДЛЫН НӨХӨН ОЛГОЛТ",
+          "pages": [
+            27,
+            27
+          ],
+          "dense": 0.3673,
+          "sparse": 0.0375,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.4228,
+          "sparse": 0.0,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "СБЗГ,",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.3939,
+          "sparse": 0.035,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-harvard",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Харвардын их сургуулийн жилийн сургалтын төлбөр хэд вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.4993034092598087,
+      "dense_top_score": 0.4993034092598087,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТАН ДЭМЖИХ ҮЙЛЧИЛГЭЭ",
+          "pages": [
+            30,
+            30
+          ],
+          "dense": 0.4993,
+          "sparse": 0.0529,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "11.23.2. Сургалтын явцыг шалтгаангүйгээр",
+          "pages": [
+            24,
+            24
+          ],
+          "dense": 0.4497,
+          "sparse": 0.0986,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            13,
+            13
+          ],
+          "dense": 0.4956,
+          "sparse": 0.0799,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "ЗУРГАА. СУРГАЛТЫН ЗОХИОН БАЙГУУЛАЛТ",
+          "pages": [
+            8,
+            8
+          ],
+          "dense": 0.3964,
+          "sparse": 0.0981,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "11.23.2. Сургалтын явцыг шалтгаангүйгээр",
+          "pages": [
+            24,
+            24
+          ],
+          "dense": 0.4819,
+          "sparse": 0.08,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-dorm-fee",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "ШУТИС-ийн оюутны байрны нэг сарын төлбөр хэд вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС дүрэм 2022 (web)",
+        "ШУТИС тушаал №199 (2025-06-06)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": false,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.6934637046836392,
+      "dense_top_score": 0.6934637046836392,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ЗАМЫН ЗАРДЛЫН НӨХӨН ОЛГОЛТ",
+          "pages": [
+            27,
+            27
+          ],
+          "dense": 0.6935,
+          "sparse": 0.1946,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "11.23.2. Сургалтын явцыг шалтгаангүйгээр",
+          "pages": [
+            24,
+            24
+          ],
+          "dense": 0.6153,
+          "sparse": 0.159,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "7. Оюутны дотуур байрны төлбөрийн мэдээлэл",
+          "pages": [
+            34,
+            34
+          ],
+          "dense": 0.5719,
+          "sparse": 0.1741,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            12,
+            12
+          ],
+          "dense": 0.6193,
+          "sparse": 0.1067,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС тушаал №199 (2025-06-06)",
+          "section": "АРВАН НЭГ. ОЮУТНЫ ШИЛЖИЛТ, ХӨДӨЛГӨӨН",
+          "pages": [
+            23,
+            23
+          ],
+          "dense": 0.6005,
+          "sparse": 0.1576,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": false,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-rector-phone",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "ШУТИС-ийн ректорын утасны дугаар хэд вэ?",
+      "answer": null,
+      "sources": [
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "ШУТИС дүрэм 2022 (web)",
+        "ШУТИС сэтгүүл"
+      ],
+      "refused": false,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.5849720359357363,
+      "dense_top_score": 0.5849720359357363,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "БҮТЭЭЛ ХҮЛЭЭН АВАХ",
+          "pages": [
+            4,
+            5
+          ],
+          "dense": 0.5658,
+          "sparse": 0.164,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС дүрэм 2022 (web)",
+          "section": "ДӨРӨВ. БАЙГУУЛЛАГЫН ТӨЛӨВ БАЙДАЛ",
+          "pages": [
+            14,
+            14
+          ],
+          "dense": 0.5661,
+          "sparse": 0.1628,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ЭРДЭМ ШИНЖИЛГЭЭНИЙ СЭТГҮҮЛИЙН Ж",
+          "pages": [
+            2,
+            3
+          ],
+          "dense": 0.585,
+          "sparse": 0.1206,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "ШУТИС",
+          "pages": [
+            19,
+            20
+          ],
+          "dense": 0.5762,
+          "sparse": 0.0585,
+          "rerank": null
+        },
+        {
+          "doc_title": "ШУТИС сэтгүүл",
+          "section": "ДӨРӨВ. РЕДАКЦЫН ЗӨВЛӨЛ",
+          "pages": [
+            5,
+            5
+          ],
+          "dense": 0.5602,
+          "sparse": 0.1337,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": false,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    },
+    {
+      "id": "exp-refuse-lyrics",
+      "category": "refusal",
+      "origin": "curated",
+      "question": "Монгол улсын төрийн дууллын үгийг бүтнээр нь бичиж өгөөч.",
+      "answer": null,
+      "sources": [
+        "2030 хөтөлбөрийн гарын авлага",
+        "Тушаал №27 (2025-2026 хичээлийн жил)",
+        "Шинэ оюутанд зориулсан гарын авлага 2022"
+      ],
+      "refused": true,
+      "should_refuse": true,
+      "expected_source": null,
+      "top_score": 0.4399565755837414,
+      "dense_top_score": 0.4399565755837414,
+      "gate": 0.54,
+      "hits": [
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ӨМНӨХ ҮГ",
+          "pages": [
+            3,
+            7
+          ],
+          "dense": 0.44,
+          "sparse": 0.0024,
+          "rerank": null
+        },
+        {
+          "doc_title": "Тушаал №27 (2025-2026 хичээлийн жил)",
+          "section": "АРВАН ХОЁР. ЭЛСЭГЧИЙН БҮРТГЭЛ",
+          "pages": [
+            11,
+            11
+          ],
+          "dense": 0.3767,
+          "sparse": 0.0512,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТАН ДЭМЖИХ ҮЙЛЧИЛГЭЭ",
+          "pages": [
+            31,
+            32
+          ],
+          "dense": 0.354,
+          "sparse": 0.0479,
+          "rerank": null
+        },
+        {
+          "doc_title": "2030 хөтөлбөрийн гарын авлага",
+          "section": "ТАНЫ ОРОЛЦОО.",
+          "pages": [
+            28,
+            28
+          ],
+          "dense": 0.4308,
+          "sparse": 0.0,
+          "rerank": null
+        },
+        {
+          "doc_title": "Шинэ оюутанд зориулсан гарын авлага 2022",
+          "section": "ОЮУТАН ДЭМЖИХ ҮЙЛЧИЛГЭЭ",
+          "pages": [
+            29,
+            30
+          ],
+          "dense": 0.4194,
+          "sparse": 0.0419,
+          "rerank": null
+        }
+      ],
+      "refusal_ok": true,
+      "retrieval_ok": null,
+      "top1_ok": null,
+      "correctness": null
+    }
+  ]
+}

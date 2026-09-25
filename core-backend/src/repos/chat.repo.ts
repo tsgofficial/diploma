@@ -4,13 +4,14 @@
  * Exported as a plain object of functions — no classes, no `this`. Every call
  * goes through Sequelize model methods; there is no raw SQL anywhere.
  */
-import { ChatMessage, ChatMessageModel, ChatMessageRole } from '../models/chatMessage.model';
+import { ChatMessage, ChatMessageModel, ChatMessageRole, Citation } from '../models/chatMessage.model';
 
 export interface CreateMessageInput {
   sessionId: string;
   role: ChatMessageRole;
   content: string;
   sources?: string[] | null;
+  citations?: Citation[] | null;
 }
 
 export const chatRepo = {
@@ -21,6 +22,7 @@ export const chatRepo = {
       role: input.role,
       content: input.content,
       sources: input.sources ?? null,
+      citations: input.citations ?? null,
     });
   },
 
@@ -39,5 +41,10 @@ export const chatRepo = {
   /** Count messages in a session (e.g. to auto-title on the first turn). */
   async countBySession(sessionId: string): Promise<number> {
     return ChatMessage.count({ where: { sessionId } });
+  },
+
+  /** Delete every message in a session. */
+  async removeBySession(sessionId: string): Promise<void> {
+    await ChatMessage.destroy({ where: { sessionId } });
   },
 };

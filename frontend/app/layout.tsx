@@ -1,15 +1,25 @@
 import type { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getTranslations } from 'next-intl/server';
+import type { ReactNode } from 'react';
+import { Providers } from './providers';
 import './globals.css';
 
-export const metadata: Metadata = {
-  title: 'University Policy Assistant',
-  description: 'Ask questions about school policies, rules, and documents.',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('app');
+  return { title: t('name'), description: t('tagline') };
+}
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: ReactNode }) {
+  const locale = await getLocale();
   return (
-    <html lang="en">
-      <body className="bg-white text-gray-900 antialiased">{children}</body>
+    // suppressHydrationWarning: next-themes sets the `dark` class before hydration.
+    <html lang={locale} suppressHydrationWarning>
+      <body className="min-h-full bg-background text-foreground antialiased">
+        <NextIntlClientProvider>
+          <Providers>{children}</Providers>
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

@@ -28,14 +28,24 @@ class ChatRequest(BaseModel):
     history: list[HistoryTurn] = Field(default_factory=list)
 
 
+class Citation(BaseModel):
+    """A source document with the page numbers the answer drew from."""
+
+    doc_title: str
+    document_id: int | None = None  # lets a client open the cited PDF pages
+    pages: list[int] = Field(default_factory=list)
+
+
 class ChatResponse(BaseModel):
     """Answer returned to the core-backend.
 
     `sources` is a list of document *titles* actually used — this mirrors what
-    `app.retrieval.answer_question()` produces, not an object list.
+    `app.retrieval.answer_question()` produces, not an object list. `citations`
+    is the additive, richer form (title + pages) for clients that want it.
     """
 
     answer: str
     sources: list[str] = Field(default_factory=list)
+    citations: list[Citation] = Field(default_factory=list)
     refused: bool = False
     top_score: float = 0.0

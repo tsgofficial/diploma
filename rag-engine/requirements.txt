@@ -12,3 +12,4 @@ uvicorn[standard]>=0.30
 # OCR fallback (also needs: brew install tesseract tesseract-lang poppler)
 pytesseract>=0.3.13
 pdf2image>=1.17
+python-multipart>=0.0.9

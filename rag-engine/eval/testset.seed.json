@@ -1,15 +1,52 @@
 [
   {
-    "id": "seed-grade-breakdown",
-    "question": "Оюутны хичээлийн дүнг нийт хэдэн оноогоор үнэлдэг вэ?",
+    "id": "seed-grade-breakdown-en",
+    "seed_id": "seed-grade-breakdown",
+    "variant": "en",
+    "question": "how many points is a course graded out of in total?",
     "reference_answer": "Нийт 100 оноогоор үнэлдэг. Үүнээс явцын үнэлгээ 70 хүртэл оноо, улирлын шалгалт 50 хүртэл оноо байна.",
-    "expected_source": "Тушаал №27",
+    "expected_source": "тушаал №199",
     "should_refuse": false,
     "category": "in-scope",
     "origin": "curated"
   },
   {
-    "id": "seed-grade-A",
+    "id": "seed-grade-breakdown-mn",
+    "seed_id": "seed-grade-breakdown",
+    "variant": "mn",
+    "question": "Оюутны хичээлийн дүнг нийт хэдэн оноогоор үнэлдэг вэ?",
+    "reference_answer": "Нийт 100 оноогоор үнэлдэг. Үүнээс явцын үнэлгээ 70 хүртэл оноо, улирлын шалгалт 50 хүртэл оноо байна.",
+    "expected_source": "тушаал №199",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-grade-breakdown-mn-latin",
+    "seed_id": "seed-grade-breakdown",
+    "variant": "mn-latin",
+    "question": "hicheeliin dung niit heden onoogoor dvgnedeg ve",
+    "reference_answer": "Нийт 100 оноогоор үнэлдэг. Үүнээс явцын үнэлгээ 70 хүртэл оноо, улирлын шалгалт 50 хүртэл оноо байна.",
+    "expected_source": "тушаал №199",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-grade-A-en",
+    "seed_id": "seed-grade-A",
+    "variant": "en",
+    "question": "how many points do i need to get an A?",
+    "reference_answer": "96-100 оноо авбал A үнэлгээ буюу 4.0 голч оноотой тэнцэнэ.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-grade-A-mn",
+    "seed_id": "seed-grade-A",
+    "variant": "mn",
     "question": "A үнэлгээ авахын тулд хэдэн оноо авах ёстой вэ?",
     "reference_answer": "96-100 оноо авбал A үнэлгээ буюу 4.0 голч оноотой тэнцэнэ.",
     "expected_source": "гарын авлага 2022",
@@ -18,7 +55,31 @@
     "origin": "curated"
   },
   {
-    "id": "seed-grade-lowest",
+    "id": "seed-grade-A-mn-latin",
+    "seed_id": "seed-grade-A",
+    "variant": "mn-latin",
+    "question": "A avahiin tuld heden onoo avah ystoi ve",
+    "reference_answer": "96-100 оноо авбал A үнэлгээ буюу 4.0 голч оноотой тэнцэнэ.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-grade-lowest-en",
+    "seed_id": "seed-grade-lowest",
+    "variant": "en",
+    "question": "what's the lowest failing grade and how many grade points is it worth?",
+    "reference_answer": "Хамгийн доод үнэлгээ нь F бөгөөд 0.0 голч оноотой тэнцэнэ.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-grade-lowest-mn",
+    "seed_id": "seed-grade-lowest",
+    "variant": "mn",
     "question": "Хамгийн доод буюу унасан үнэлгээ юу вэ, хэдэн голч оноотой вэ?",
     "reference_answer": "Хамгийн доод үнэлгээ нь F бөгөөд 0.0 голч оноотой тэнцэнэ.",
     "expected_source": "гарын авлага 2022",
@@ -27,7 +88,31 @@
     "origin": "curated"
   },
   {
-    "id": "seed-grade-Aminus",
+    "id": "seed-grade-lowest-mn-latin",
+    "seed_id": "seed-grade-lowest",
+    "variant": "mn-latin",
+    "question": "hamgiin muu unasan dun ni yu ve, heden golch onootoi ve",
+    "reference_answer": "Хамгийн доод үнэлгээ нь F бөгөөд 0.0 голч оноотой тэнцэнэ.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-grade-Aminus-en",
+    "seed_id": "seed-grade-Aminus",
+    "variant": "en",
+    "question": "what's the score range for an A- and how many grade points is it?",
+    "reference_answer": "A- үнэлгээ нь 91-95 оноонд харгалзах бөгөөд 3.7 голч оноотой.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-grade-Aminus-mn",
+    "seed_id": "seed-grade-Aminus",
+    "variant": "mn",
     "question": "A- үнэлгээний онооны хязгаар болон голч оноо хэд вэ?",
     "reference_answer": "A- үнэлгээ нь 91-95 оноонд харгалзах бөгөөд 3.7 голч оноотой.",
     "expected_source": "гарын авлага 2022",
@@ -36,7 +121,277 @@
     "origin": "curated"
   },
   {
-    "id": "seed-refuse-flight",
+    "id": "seed-grade-Aminus-mn-latin",
+    "seed_id": "seed-grade-Aminus",
+    "variant": "mn-latin",
+    "question": "A- avahad heden onoo heregtei ve, golch ni hed ve",
+    "reference_answer": "A- үнэлгээ нь 91-95 оноонд харгалзах бөгөөд 3.7 голч оноотой.",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-dorm-branch-en",
+    "seed_id": "seed-dorm-branch",
+    "variant": "en",
+    "question": "does every branch schools have dorms",
+    "reference_answer": "Баримт бичигт салбар сургууль бүр оюутны байртай эсэхийг тодорхой заагаагүй. ШУТИС нь 1000 гаруй оюутан хамрах таван оюутны байртай, ихэвчлэн I–II курсийн оюутнуудыг хамруулдаг; жагсаасан байрууд (I байр – Сүхбаатар дүүрэг, III ба IV байр – Баянзүрх дүүрэг, V байр – Хан-Уул дүүрэг) бүгд Улаанбаатарт байрладаг.",
+    "expected_source": [
+      "гарын авлага 2022",
+      "дүрэм 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-dorm-branch-mn",
+    "seed_id": "seed-dorm-branch",
+    "variant": "mn",
+    "question": "Салбар сургууль бүр оюутны байртай юу?",
+    "reference_answer": "Баримт бичигт салбар сургууль бүр оюутны байртай эсэхийг тодорхой заагаагүй. ШУТИС нь 1000 гаруй оюутан хамрах таван оюутны байртай, ихэвчлэн I–II курсийн оюутнуудыг хамруулдаг; жагсаасан байрууд (I байр – Сүхбаатар дүүрэг, III ба IV байр – Баянзүрх дүүрэг, V байр – Хан-Уул дүүрэг) бүгд Улаанбаатарт байрладаг.",
+    "expected_source": [
+      "гарын авлага 2022",
+      "дүрэм 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-dorm-branch-mn-latin",
+    "seed_id": "seed-dorm-branch",
+    "variant": "mn-latin",
+    "question": "salbar surguuli bolgon oyutnii bairtai yu?",
+    "reference_answer": "Баримт бичигт салбар сургууль бүр оюутны байртай эсэхийг тодорхой заагаагүй. ШУТИС нь 1000 гаруй оюутан хамрах таван оюутны байртай, ихэвчлэн I–II курсийн оюутнуудыг хамруулдаг; жагсаасан байрууд (I байр – Сүхбаатар дүүрэг, III ба IV байр – Баянзүрх дүүрэг, V байр – Хан-Уул дүүрэг) бүгд Улаанбаатарт байрладаг.",
+    "expected_source": [
+      "гарын авлага 2022",
+      "дүрэм 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-gpa-graduate-en",
+    "seed_id": "seed-gpa-graduate",
+    "variant": "en",
+    "question": "what gpa do i supposed to get at least to graduate",
+    "reference_answer": "Баримт бичигт төгсөхөд шаардагдах доод голч дүнг тоогоор заагаагүй: сургалтын төлөвлөгөөний кредитийг бүрэн цуглуулж, үнэлгээний голч дүн шаардлага хангасан оюутныг төгсөх оюутнаар бүртгэх ба төгсөлтийг «ШУТИС-ийн бакалаврын төгсөлтийн журам»-аар зохицуулна. Холбогдох заалт: голч дүн 3 удаа 0.7-оос доош бол, эсвэл анхааруулгын хуудсанд 3 улирал бичигдвэл сургуулиас хасагдана.",
+    "expected_source": [
+      "дүрэм 2022",
+      "тушаал №199",
+      "гарын авлага 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-gpa-graduate-mn",
+    "seed_id": "seed-gpa-graduate",
+    "variant": "mn",
+    "question": "Төгсөхийн тулд голч дүн хамгийн багадаа хэд байх ёстой вэ?",
+    "reference_answer": "Баримт бичигт төгсөхөд шаардагдах доод голч дүнг тоогоор заагаагүй: сургалтын төлөвлөгөөний кредитийг бүрэн цуглуулж, үнэлгээний голч дүн шаардлага хангасан оюутныг төгсөх оюутнаар бүртгэх ба төгсөлтийг «ШУТИС-ийн бакалаврын төгсөлтийн журам»-аар зохицуулна. Холбогдох заалт: голч дүн 3 удаа 0.7-оос доош бол, эсвэл анхааруулгын хуудсанд 3 улирал бичигдвэл сургуулиас хасагдана.",
+    "expected_source": [
+      "дүрэм 2022",
+      "тушаал №199",
+      "гарын авлага 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-gpa-graduate-mn-latin",
+    "seed_id": "seed-gpa-graduate",
+    "variant": "mn-latin",
+    "question": "tugsuhiin tuld golch hamgiin bagadaa hed baih ystoi ve",
+    "reference_answer": "Баримт бичигт төгсөхөд шаардагдах доод голч дүнг тоогоор заагаагүй: сургалтын төлөвлөгөөний кредитийг бүрэн цуглуулж, үнэлгээний голч дүн шаардлага хангасан оюутныг төгсөх оюутнаар бүртгэх ба төгсөлтийг «ШУТИС-ийн бакалаврын төгсөлтийн журам»-аар зохицуулна. Холбогдох заалт: голч дүн 3 удаа 0.7-оос доош бол, эсвэл анхааруулгын хуудсанд 3 улирал бичигдвэл сургуулиас хасагдана.",
+    "expected_source": [
+      "дүрэм 2022",
+      "тушаал №199",
+      "гарын авлага 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-midterm-count-en",
+    "seed_id": "seed-midterm-count",
+    "variant": "en",
+    "question": "how many mid term exams are there",
+    "reference_answer": "Явцын шалгалтыг хичээлийн онцлогоос хамаарч улиралд 1-ээс доошгүй удаа зохион байгуулна (тушаал №199, 10.40.1). Хичээлийн үнэлгээ нийт 100 оноо: явц 70 хүртэл, улирлын шалгалт 50 хүртэл оноо (тушаал №199); гарын авлагад багшийн үнэлгээ 70, улирлын шалгалт 30 оноо гэж заасан.",
+    "expected_source": [
+      "тушаал №199",
+      "гарын авлага 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-midterm-count-mn",
+    "seed_id": "seed-midterm-count",
+    "variant": "mn",
+    "question": "Улиралд хэдэн удаа явцын шалгалт авдаг вэ?",
+    "reference_answer": "Явцын шалгалтыг хичээлийн онцлогоос хамаарч улиралд 1-ээс доошгүй удаа зохион байгуулна (тушаал №199, 10.40.1). Хичээлийн үнэлгээ нийт 100 оноо: явц 70 хүртэл, улирлын шалгалт 50 хүртэл оноо (тушаал №199); гарын авлагад багшийн үнэлгээ 70, улирлын шалгалт 30 оноо гэж заасан.",
+    "expected_source": [
+      "тушаал №199",
+      "гарын авлага 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-midterm-count-mn-latin",
+    "seed_id": "seed-midterm-count",
+    "variant": "mn-latin",
+    "question": "ulirliin dunduur heden shalgalt avdag ve?",
+    "reference_answer": "Явцын шалгалтыг хичээлийн онцлогоос хамаарч улиралд 1-ээс доошгүй удаа зохион байгуулна (тушаал №199, 10.40.1). Хичээлийн үнэлгээ нийт 100 оноо: явц 70 хүртэл, улирлын шалгалт 50 хүртэл оноо (тушаал №199); гарын авлагад багшийн үнэлгээ 70, улирлын шалгалт 30 оноо гэж заасан.",
+    "expected_source": [
+      "тушаал №199",
+      "гарын авлага 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-sict-website-en",
+    "seed_id": "seed-sict-website",
+    "variant": "en",
+    "question": "what is the website of our school which is School of Information and Communication Technology",
+    "reference_answer": "Мэдээлэл, холбооны технологийн сургуулийн вэб сайт: http://www.sict.edu.mn",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-sict-website-mn",
+    "seed_id": "seed-sict-website",
+    "variant": "mn",
+    "question": "Мэдээлэл, холбооны технологийн сургуулийн вэб сайтын хаяг юу вэ?",
+    "reference_answer": "Мэдээлэл, холбооны технологийн сургуулийн вэб сайт: http://www.sict.edu.mn",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-sict-website-mn-latin",
+    "seed_id": "seed-sict-website",
+    "variant": "mn-latin",
+    "question": "manai MHTS surguuliin web saitiin hayag yu ve",
+    "reference_answer": "Мэдээлэл, холбооны технологийн сургуулийн вэб сайт: http://www.sict.edu.mn",
+    "expected_source": "гарын авлага 2022",
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-pass-not-F-en",
+    "seed_id": "seed-pass-not-F",
+    "variant": "en",
+    "question": "what grade do i supposed to get out of 100 to not to get F",
+    "reference_answer": "2025 оны журмаар (тушаал №199, хүснэгт 10.2) 0–59 оноо F тул F авахгүйн тулд дор хаяж 60 оноо (D-, 1.0) авах шаардлагатай. 2022 оны гарын авлагын хүснэгтээр 0–60 оноо F тул дор хаяж 61 оноо (D-, 0.7).",
+    "expected_source": [
+      "тушаал №199",
+      "гарын авлага 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-pass-not-F-mn",
+    "seed_id": "seed-pass-not-F",
+    "variant": "mn",
+    "question": "F үнэлгээ авахгүйн тулд 100 онооноос хамгийн багадаа хэдэн оноо авах ёстой вэ?",
+    "reference_answer": "2025 оны журмаар (тушаал №199, хүснэгт 10.2) 0–59 оноо F тул F авахгүйн тулд дор хаяж 60 оноо (D-, 1.0) авах шаардлагатай. 2022 оны гарын авлагын хүснэгтээр 0–60 оноо F тул дор хаяж 61 оноо (D-, 0.7).",
+    "expected_source": [
+      "тушаал №199",
+      "гарын авлага 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-pass-not-F-mn-latin",
+    "seed_id": "seed-pass-not-F",
+    "variant": "mn-latin",
+    "question": "F avahgui baihiin tuld 100aas heden onoo avah ystoi ve",
+    "reference_answer": "2025 оны журмаар (тушаал №199, хүснэгт 10.2) 0–59 оноо F тул F авахгүйн тулд дор хаяж 60 оноо (D-, 1.0) авах шаардлагатай. 2022 оны гарын авлагын хүснэгтээр 0–60 оноо F тул дор хаяж 61 оноо (D-, 0.7).",
+    "expected_source": [
+      "тушаал №199",
+      "гарын авлага 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-pass-threshold-en",
+    "seed_id": "seed-pass-threshold",
+    "variant": "en",
+    "question": "what grade do i supposed to get to pass the bar",
+    "reference_answer": "Хичээлд тэнцэхийн тулд F-ээс дээш үнэлгээ авах ёстой: 2025 оны журмаар (тушаал №199) хамгийн багадаа 60 оноо буюу D- (1.0); 2022 оны гарын авлагаар хамгийн багадаа 61 оноо буюу D- (0.7).",
+    "expected_source": [
+      "тушаал №199",
+      "гарын авлага 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-pass-threshold-mn",
+    "seed_id": "seed-pass-threshold",
+    "variant": "mn",
+    "question": "Хичээлд тэнцэхийн тулд хамгийн багадаа ямар дүн авах шаардлагатай вэ?",
+    "reference_answer": "Хичээлд тэнцэхийн тулд F-ээс дээш үнэлгээ авах ёстой: 2025 оны журмаар (тушаал №199) хамгийн багадаа 60 оноо буюу D- (1.0); 2022 оны гарын авлагаар хамгийн багадаа 61 оноо буюу D- (0.7).",
+    "expected_source": [
+      "тушаал №199",
+      "гарын авлага 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-pass-threshold-mn-latin",
+    "seed_id": "seed-pass-threshold",
+    "variant": "mn-latin",
+    "question": "hicheeld tentsehiin tuld hamgiin bagadaa yamar dun avah heregtei ve",
+    "reference_answer": "Хичээлд тэнцэхийн тулд F-ээс дээш үнэлгээ авах ёстой: 2025 оны журмаар (тушаал №199) хамгийн багадаа 60 оноо буюу D- (1.0); 2022 оны гарын авлагаар хамгийн багадаа 61 оноо буюу D- (0.7).",
+    "expected_source": [
+      "тушаал №199",
+      "гарын авлага 2022"
+    ],
+    "should_refuse": false,
+    "category": "in-scope",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-flight-en",
+    "seed_id": "seed-refuse-flight",
+    "variant": "en",
+    "question": "how much is a flight ticket from ulaanbaatar to tokyo?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-flight-mn",
+    "seed_id": "seed-refuse-flight",
+    "variant": "mn",
     "question": "Улаанбаатараас Токио хүрэх онгоцны тийзний үнэ хэд вэ?",
     "reference_answer": null,
     "expected_source": null,
@@ -45,7 +400,31 @@
     "origin": "curated"
   },
   {
-    "id": "seed-refuse-recipe",
+    "id": "seed-refuse-flight-mn-latin",
+    "seed_id": "seed-refuse-flight",
+    "variant": "mn-latin",
+    "question": "ulaanbaatraas tokio yavah ongotsnii tiiz hed ve",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-recipe-en",
+    "seed_id": "seed-refuse-recipe",
+    "variant": "en",
+    "question": "give me a goulash recipe",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-recipe-mn",
+    "seed_id": "seed-refuse-recipe",
+    "variant": "mn",
     "question": "Гуляшийн жор бичиж өгөөч.",
     "reference_answer": null,
     "expected_source": null,
@@ -54,7 +433,31 @@
     "origin": "curated"
   },
   {
-    "id": "seed-refuse-weather",
+    "id": "seed-refuse-recipe-mn-latin",
+    "seed_id": "seed-refuse-recipe",
+    "variant": "mn-latin",
+    "question": "gulyashnii jor bichij ugluuch",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-weather-en",
+    "seed_id": "seed-refuse-weather",
+    "variant": "en",
+    "question": "what's the weather going to be like in ulaanbaatar tomorrow?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-weather-mn",
+    "seed_id": "seed-refuse-weather",
+    "variant": "mn",
     "question": "Маргааш Улаанбаатарт цаг агаар ямар байх вэ?",
     "reference_answer": null,
     "expected_source": null,
@@ -63,8 +466,43 @@
     "origin": "curated"
   },
   {
-    "id": "seed-refuse-celebrity",
+    "id": "seed-refuse-weather-mn-latin",
+    "seed_id": "seed-refuse-weather",
+    "variant": "mn-latin",
+    "question": "margaash ulaanbaatart tsag agaar yamar baih ve",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-celebrity-en",
+    "seed_id": "seed-refuse-celebrity",
+    "variant": "en",
+    "question": "who is the 2026 world chess champion?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-celebrity-mn",
+    "seed_id": "seed-refuse-celebrity",
+    "variant": "mn",
     "question": "2026 оны дэлхийн шатрын аварга хэн бэ?",
+    "reference_answer": null,
+    "expected_source": null,
+    "should_refuse": true,
+    "category": "refusal",
+    "origin": "curated"
+  },
+  {
+    "id": "seed-refuse-celebrity-mn-latin",
+    "seed_id": "seed-refuse-celebrity",
+    "variant": "mn-latin",
+    "question": "2026 onii delhiin shatriin avarga hen be",
     "reference_answer": null,
     "expected_source": null,
     "should_refuse": true,

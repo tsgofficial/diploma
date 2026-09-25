@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS documents (
                      CHECK(status IN ('active', 'deprecated', 'superseded')),
     superseded_by_id INTEGER REFERENCES documents(id),
     chunk_count      INTEGER NOT NULL DEFAULT 0,
+    page_count       INTEGER NOT NULL DEFAULT 0,
     uploaded_at      TEXT    NOT NULL DEFAULT (datetime('now'))
 );
 
@@ -27,11 +28,22 @@ CREATE INDEX IF NOT EXISTS idx_documents_status ON documents(status);
 """
 
 
+# Columns added after the first release. `CREATE TABLE IF NOT EXISTS` never
+# alters an existing table, so each is applied with a guarded ALTER.
+_ADDED_COLUMNS = [
+    ("documents", "page_count", "INTEGER NOT NULL DEFAULT 0"),
+]
+
+
 def init_db() -> None:
-    """Create data dir + tables. Idempotent."""
+    """Create data dir + tables, apply column additions. Idempotent."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     with connect() as conn:
         conn.executescript(SCHEMA)
+        for table, column, decl in _ADDED_COLUMNS:
+            existing = {row["name"] for row in conn.execute(f"PRAGMA table_info({table})")}
+            if column not in existing:
+                conn.execute(f"ALTER TABLE {table} ADD COLUMN {column} {decl}")
 
 
 @contextmanager

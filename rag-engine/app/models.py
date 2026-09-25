@@ -19,11 +19,14 @@ class Document:
     status: str
     superseded_by_id: Optional[int]
     chunk_count: int
+    page_count: int
     uploaded_at: str
 
 
 def _row_to_document(row) -> Document:
-    return Document(**dict(row))
+    data = dict(row)
+    data.setdefault("page_count", 0)
+    return Document(**data)
 
 
 def create_document(
@@ -33,14 +36,15 @@ def create_document(
     effective_date: Optional[date] = None,
     expiry_date: Optional[date] = None,
     chunk_count: int = 0,
+    page_count: int = 0,
 ) -> int:
     """Insert a document row. Returns the new id."""
     with connect() as conn:
         cur = conn.execute(
             """
             INSERT INTO documents
-                (title, filename, category, effective_date, expiry_date, chunk_count)
-            VALUES (?, ?, ?, ?, ?, ?)
+                (title, filename, category, effective_date, expiry_date, chunk_count, page_count)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 title,
@@ -49,6 +53,7 @@ def create_document(
                 effective_date.isoformat() if effective_date else None,
                 expiry_date.isoformat() if expiry_date else None,
                 chunk_count,
+                page_count,
             ),
         )
         return cur.lastrowid
@@ -88,6 +93,20 @@ def set_status(doc_id: int, status: str) -> None:
     if status not in {"active", "deprecated", "superseded"}:
         raise ValueError(f"invalid status: {status}")
     with connect() as conn:
+        if status == "superseded":
+            conn.execute("UPDATE documents SET status = ? WHERE id = ?", (status, doc_id))
+        else:
+            # Leaving "superseded" invalidates the pointer to the replacement.
+            conn.execute(
+                "UPDATE documents SET status = ?, superseded_by_id = NULL WHERE id = ?", (status, doc_id)
+            )
+
+
+def delete_document(doc_id: int) -> None:
+    """Remove the row. Caller must also delete the Qdrant chunks (and clear
+    any `superseded_by_id` references, which this does)."""
+    with connect() as conn:
         conn.execute(
-            "UPDATE documents SET status = ? WHERE id = ?", (status, doc_id)
+            "UPDATE documents SET superseded_by_id = NULL WHERE superseded_by_id = ?", (doc_id,)
         )
+        conn.execute("DELETE FROM documents WHERE id = ?", (doc_id,))

@@ -16,18 +16,20 @@ diploma/
 │   ├── config.py         constants + .env loader
 │   ├── db.py             SQLite connection + schema
 │   ├── models.py         Document dataclass + CRUD
-│   ├── extract.py        PDF text extraction with auto OCR fallback
+│   ├── extract.py        PDF text extraction (per page) with auto OCR fallback + cache
 │   ├── ocr.py            Tesseract OCR wrapper
-│   ├── chunking.py       paragraph/sentence chunker
-│   ├── embed.py          bge-m3 embeddings (lazy singleton)
-│   ├── vector_store.py   Qdrant wrapper
+│   ├── chunking.py       section- and page-aware chunker
+│   ├── embed.py          bge-m3 dense + sparse embeddings (lazy singleton)
+│   ├── rerank.py         bge-reranker-v2-m3 cross-encoder (lazy singleton)
+│   ├── vector_store.py   Qdrant wrapper (hybrid: dense + sparse, RRF fusion)
 │   ├── llm.py            Gemini wrapper + system prompt
 │   ├── ingestion.py      orchestrator: PDF → SQLite + Qdrant
 │   └── retrieval.py      orchestrator: question → answer
 ├── scripts/
 │   └── ingest_all.py     batch ingest the six source PDFs
 ├── data/
-│   └── policies.db       SQLite (created at runtime, gitignored)
+│   ├── policies.db       SQLite (created at runtime, gitignored)
+│   └── extracted/        cached page text per PDF (content-hash keyed)
 ├── pdfs/                 source PDFs
 ├── poc.py                original single-file proof of concept (kept for reference)
 ├── requirements.txt      Python dependencies
@@ -80,54 +82,78 @@ same two orchestrators — `ingestion.ingest_pdf()` and
 ```
 PDF file
    │
-   │  app.extract.extract_text(path)
-   │     ├── try PyMuPDF
+   │  app.extract.extract_pages(path)          (cached in data/extracted/)
+   │     ├── try PyMuPDF, page by page
    │     ├── score Cyrillic ratio
-   │     └── if garbled or empty → app.ocr.extract_with_ocr()
+   │     └── if garbled or empty → app.ocr.ocr_pages()
    ▼
-plain text (Mongolian Cyrillic)
+list[str]  ← one string per page (Mongolian Cyrillic)
    │
-   │  app.chunking.chunk_text(text)
+   │  app.chunking.chunk_pages(pages)
    ▼
-list[str]  ← chunks (~800 chars, 100 overlap, paragraph-aware)
+list[Chunk]  ← {text, section, page_start, page_end}
+   │           ~800 chars, never crossing a heading; overlap within section only
+   │           runs of short numbered items ("1. <school> <url>") stay in the text as a
+   │           list; stacked headings join as "A / B" (wrapped titles, table columns)
    │
-   │  app.embed.embed_texts(chunks)
+   │  app.ingestion.embedding_text(title, chunk)  → "title\nsection\n\ntext"
+   │  app.embed.embed_texts(...)        → dense  (N, 1024) L2-normalized
+   │  app.embed.sparse_embed_texts(...) → sparse {token_id: weight} per chunk
    ▼
-ndarray (N, 1024)  ← bge-m3 vectors, L2-normalized
-   │
    │  app.models.create_document(...)
    ▼
 SQLite row in `documents` table  → document_id
    │
-   │  app.vector_store.upsert_chunks(document_id, ..., chunks, embeddings)
+   │  app.vector_store.upsert_chunks(...)
    ▼
-N points in Qdrant collection `policies`, each with payload:
-{ text, chunk_index, document_id, doc_title, category, effective_date, status }
+N points in Qdrant collection `policies`, vectors {dense, sparse}, payload:
+{ text, section, page_start, page_end, chunk_index, document_id, doc_title,
+  category, effective_date, status }
 ```
 
 ## Data flow — query
 
 ```
-question (str)
+question (str) [+ history]
    │
-   │  app.embed.embed_query(q)
+   │  app.llm.rewrite_query()   one Gemini call → {query, alternatives, language, in_scope}
+   │     translates English / Latin-script Mongolian to formal Mongolian, expands
+   │     abbreviations, condenses follow-ups (QUERY_REWRITE=0 → condense_question() only)
+   │
+   ├─ in_scope == false (nothing to do with the university) → return refusal
+   │     before any search — otherwise the reranker scores the closest chunk highly
    ▼
-list[float] (1024)
+standalone query (+ alternative phrasings: each is searched, every candidate is
+                  reranked against every phrasing, best score kept)
    │
-   │  app.vector_store.search_active(vec, top_k=5)
-   │     └── filter: payload.status == "active"
+   │  app.embed.embed_query(q)        → dense  list[float] (1024)
+   │  app.embed.sparse_embed_query(q) → sparse {token_id: weight}
    ▼
-list[ScoredPoint]
+   │  app.vector_store.search_active(dense, sparse, top_k=CANDIDATE_K)
+   │     ├── prefetch dense  (cosine, status == "active")
+   │     ├── prefetch sparse (dot,    status == "active")
+   │     └── FusionQuery(RRF)  → 20 candidates
+   ▼
+   │  app.rerank.rerank(q, candidates)  → bge-reranker-v2-m3 probability each
+   │  sort, keep TOP_K (+ the RESCUE_K best fused candidates if demoted)
+   ▼
+list[Hit]  {payload, dense_score, sparse_score, rerank_score}
    │
-   ├─ if top_score < MIN_RELEVANCE_SCORE → return refusal (no LLM call)
+   ├─ if best rerank_score < MIN_RERANK_SCORE → return refusal (no LLM call)
    │
    │  app.llm.generate_answer(question, context_chunks)
-   │     ├── system prompt: "answer only from context, refuse otherwise"
+   │     ├── each chunk headed "[Эх сурвалж: <title>, х. <pages> | <section>]"
+   │     ├── system prompt: answer only from context, cite title + page;
+   │     │   if only related facts exist, say it isn't stated, then give them
    │     ├── temperature=0, thinking disabled
-   │     └── Gemini 2.5-flash
+   │     └── Gemini 3.1-flash-lite (daily-quota 429 → GeminiQuotaExceeded, surfaced to
+   │         the user instead of a false "мэдээлэл олдсонгүй"; 5xx retried twice)
    ▼
-{ answer, sources, hits, refused, top_score, llm_usage }
+{ answer, sources, citations[{doc_title, document_id, pages}], hits, refused, top_score, llm_usage }
 ```
+
+`retrieval.retrieve()` is everything above the LLM call; the eval harness
+calls it directly so retrieval quality is measured with zero Gemini calls.
 
 ---
 
@@ -155,8 +181,8 @@ All tunable constants in one place. Loads `.env` at import time via
 - **Qdrant** — `QDRANT_HOST`, `QDRANT_PORT`, `COLLECTION`
 - **Embeddings** — `EMBED_MODEL_NAME` (`BAAI/bge-m3`), `EMBED_DIM` (1024)
 - **Chunking** — `CHUNK_SIZE` (800), `CHUNK_OVERLAP` (100)
-- **Retrieval** — `TOP_K` (5), `MIN_RELEVANCE_SCORE` (0.45)
-- **LLM** — `GEMINI_MODEL` (`gemini-2.5-flash`), `GEMINI_MAX_OUTPUT_TOKENS` (2048)
+- **Retrieval** — `TOP_K` (5), `CANDIDATE_K` (20), `HYBRID_SEARCH`, `RERANK`, `RERANK_MODEL`, `MIN_RERANK_SCORE`, `MIN_RELEVANCE_SCORE` (0.54)
+- **LLM** — `GEMINI_MODEL` (`gemini-3.1-flash-lite`, env-overridable), `GEMINI_MAX_OUTPUT_TOKENS` (2048)
 
 To tune retrieval behavior or swap models, edit this file alone.
 
@@ -347,9 +373,17 @@ update.
 |---|---|---|
 | `CHUNK_SIZE` | 800 | Target chunk length in chars. Bigger → fewer chunks, more context per hit, but more diluted relevance |
 | `CHUNK_OVERLAP` | 100 | Chars repeated between adjacent chunks. Higher → less boundary loss, more storage |
-| `TOP_K` | 5 | How many chunks to retrieve per question. Higher → more LLM input tokens, possibly more noise |
-| `MIN_RELEVANCE_SCORE` | 0.45 | Below this top cosine score, short-circuit to refusal without calling the LLM |
-| `GEMINI_MODEL` | `gemini-2.5-flash` | Swap to `gemini-2.5-pro` if quality matters more than cost |
+| `MIN_CHUNK_SIZE` | 200 | A section shorter than this merges into the following chunk instead of becoming a micro-chunk |
+| `TOP_K` | 5 | How many chunks reach the LLM. Higher → more input tokens, possibly more noise |
+| `CANDIDATE_K` | 20 | How many fused candidates the reranker scores |
+| `HYBRID_SEARCH` | on | Dense + sparse RRF fusion. `HYBRID_SEARCH=0` env → dense only |
+| `RERANK` | on | Cross-encoder rerank. `RERANK=0` env → skip |
+| `RERANK_MODEL` | `BAAI/bge-reranker-v2-m3` | Multilingual cross-encoder, ~2.2 GB, runs locally |
+| `RERANK_INCLUDE_TITLE` | on | Prefix doc title to the passage the reranker judges. `RERANK_INCLUDE_TITLE=0` env → section + body only |
+| `RESCUE_K` | 5 | Best fused candidates kept in the LLM context even if the reranker demoted them (cross-encoders misjudge terse table rows) |
+| `MIN_RERANK_SCORE` | see config | Refusal gate on the best reranker probability (reranker on) |
+| `MIN_RELEVANCE_SCORE` | 0.54 | Refusal gate on the best dense cosine score (reranker off) |
+| `GEMINI_MODEL` | `gemini-3.1-flash-lite` | Env var. Free tier: ~500 req/day vs ~20 for `gemini-2.5-flash`; each model has its own quota |
 | `GEMINI_MAX_OUTPUT_TOKENS` | 2048 | Raise if answers are getting truncated (check `finish_reason == MAX_TOKENS`) |
 
 In `app/extract.py`:
@@ -401,12 +435,34 @@ python -m app set-status 6 deprecated
 
 ---
 
+## HTTP API (FastAPI, `app/api/routes/`)
+
+All routes require the `x-internal-key` header; only the Node core-backend
+holds it. The engine has no notion of users — the backend enforces roles.
+
+| Route | Purpose |
+|---|---|
+| `GET /health` | liveness |
+| `POST /api/chat` | one-shot answer `{answer, sources, citations, refused, top_score}` |
+| `POST /api/chat/stream` | same pipeline as server-sent events: `status` → `sources` → `delta`* → `done` (or `error`) |
+| `GET /api/admin/documents[?status=]` | list documents (SQLite `documents`) |
+| `GET /api/admin/documents/{id}` | one document |
+| `GET /api/admin/documents/{id}/pages/{page}[?dpi=]` | one page of the original PDF as PNG (PyMuPDF, LRU-cached) — the chat's source viewer |
+| `GET /api/admin/documents/{id}/file` | the original PDF, inline |
+| `POST /api/admin/documents` | multipart upload (`file`, `title`, `category`, `effective_date`, `expiry_date`, `force_ocr`, `supersedes_id`) → `202 {job_id}` |
+| `POST /api/admin/documents/{id}/supersede?by=` | mark replaced (SQLite + Qdrant payload) |
+| `PATCH /api/admin/documents/{id}/status?new_status=` | active / deprecated / superseded; retrieval searches active only |
+| `DELETE /api/admin/documents/{id}?delete_file=` | remove chunks + row (+ PDF) |
+| `POST /api/admin/reingest` | rebuild the whole KB from `pdfs/`, keeping metadata → `202 {job_id}` |
+| `GET /api/admin/jobs`, `GET /api/admin/jobs/{id}` | background job status: `queued/running/done/failed`, progress lines, result |
+
+Ingest jobs (`app/jobs.py`) run on a single worker thread because the
+embedding models are process-wide singletons. State is in-memory; a job lost
+to a restart is simply re-run. Extraction is cached, so a full reingest of the
+six source PDFs takes ~100 s (embedding only).
+
 ## What's NOT here yet
 
-For reference — the next layers, in build order:
-
-1. **FastAPI app** (`app/api/`) — `POST /chat`, `POST /admin/upload`, `GET /admin/documents`, `POST /admin/documents/{id}/supersede`. Will import `ingestion.ingest_pdf` and `retrieval.answer_question` directly.
-2. **Admin auth** — `ADMIN_PASSWORD` env var + HTTP Basic or signed session cookie.
-3. **Templates** — Jinja2 + HTMX for admin upload form and student chat UI. Or React + JSON API if richer interactivity is needed.
-4. **Supersedes UI** — admin marks new uploads as superseding existing docs; retrieval already filters by `status="active"` so this Just Works once the metadata is right.
-5. **Re-ingest workflow** — currently re-ingesting a PDF creates a duplicate. Need either content-hash deduplication or an explicit "replace document N" flow that calls `vector_store.delete_document_chunks(N)` first.
+- **Migrations** — SQLite columns added after v1 are applied by guarded `ALTER TABLE` in `db.py`; fine for one deployment, not a migration system.
+- **Content-hash dedup on upload** — uploading the same PDF twice creates two documents. Use `supersedes_id` to replace.
+- **Job persistence** — jobs live in memory; a restart during ingest loses the status (not the data already stored).

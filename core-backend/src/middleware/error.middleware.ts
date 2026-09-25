@@ -12,7 +12,14 @@ export function errorHandler(
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _next: NextFunction
 ): void {
-  const status = isHttpError(err) ? err.status : 500;
+  const multerCode = (err as { code?: string } | null)?.code;
+  const status = isHttpError(err)
+    ? err.status
+    : multerCode === 'LIMIT_FILE_SIZE'
+      ? 413
+      : multerCode?.startsWith('LIMIT_')
+        ? 400
+        : 500;
   const message =
     err instanceof Error && status < 500 ? err.message : 'Internal server error';
 

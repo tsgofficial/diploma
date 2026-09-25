@@ -13,12 +13,17 @@ import {
 } from 'sequelize';
 import { sequelize } from '../config/database';
 
+export type UserRole = 'user' | 'admin';
+
 export interface UserModel
   extends Model<InferAttributes<UserModel>, InferCreationAttributes<UserModel>> {
   id: CreationOptional<string>;
   email: string;
   passwordHash: string;
   name: string | null;
+  // `user` chats and reads the document list; `admin` also manages the
+  // knowledge base and other users' roles.
+  role: CreationOptional<UserRole>;
   createdAt: CreationOptional<Date>;
   updatedAt: CreationOptional<Date>;
 }
@@ -45,6 +50,11 @@ export const User = sequelize.define<UserModel>(
     name: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    role: {
+      type: DataTypes.ENUM('user', 'admin'),
+      allowNull: false,
+      defaultValue: 'user',
     },
     // Declared for typing; managed automatically by `timestamps: true`.
     createdAt: DataTypes.DATE,

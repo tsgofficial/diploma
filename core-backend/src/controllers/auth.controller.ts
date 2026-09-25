@@ -31,6 +31,17 @@ export const authController = {
     }
   },
 
+  /** GET /api/auth/me — the signed-in user, with their current role. */
+  async me(req: Request, res: Response, next: NextFunction): Promise<void> {
+    try {
+      const user = await authService.me(req.userId as string);
+      if (!user) throw createHttpError(401, 'account no longer exists');
+      res.json({ user });
+    } catch (err) {
+      next(err);
+    }
+  },
+
   async login(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       const { email, password } = req.body ?? {};

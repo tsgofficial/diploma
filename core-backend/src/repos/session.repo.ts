@@ -29,4 +29,19 @@ export const sessionRepo = {
       order: [['updatedAt', 'DESC']],
     });
   },
+
+  /** Set the sidebar title (auto-generated from the first question, or renamed). */
+  async updateTitle(id: string, title: string): Promise<void> {
+    await ChatSession.update({ title }, { where: { id } });
+  },
+
+  /** Bump updatedAt so the session floats to the top of the list. */
+  async touch(id: string): Promise<void> {
+    await ChatSession.update({ updatedAt: new Date() }, { where: { id } });
+  },
+
+  /** Delete a session and its messages (FK cascade via association). */
+  async remove(id: string): Promise<void> {
+    await ChatSession.destroy({ where: { id } });
+  },
 };

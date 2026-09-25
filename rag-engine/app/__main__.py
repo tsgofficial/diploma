@@ -51,8 +51,11 @@ def cmd_chat(args: argparse.Namespace) -> int:
     print(f"Top score: {result['top_score']:.3f}  refused={result['refused']}")
     print(f"\nRetrieved chunks:")
     for i, h in enumerate(result["hits"], 1):
-        snippet = h.payload["text"].replace("\n", " ")[:120]
-        print(f"  [{i}] {h.score:.3f}  {h.payload['doc_title']}: {snippet}...")
+        p = h.payload
+        snippet = p["text"].replace("\n", " ")[:100]
+        rr = f"rerank={h.rerank_score:.3f} " if h.rerank_score is not None else ""
+        pages = f"х.{p.get('page_start')}" + (f"-{p['page_end']}" if p.get("page_end") != p.get("page_start") else "")
+        print(f"  [{i}] {rr}dense={h.dense_score:.3f} sparse={h.sparse_score:.2f}  {p['doc_title']} {pages} | {p.get('section') or ''}: {snippet}...")
 
     print(f"\n--- Answer ---\n{result['answer']}")
 

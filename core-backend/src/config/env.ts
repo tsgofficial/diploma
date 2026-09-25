@@ -30,4 +30,11 @@ export const env = Object.freeze({
   RAG_INTERNAL_KEY: optional('RAG_INTERNAL_KEY', 'dev-internal-key-change-me'),
   RAG_TIMEOUT_MS: Number(optional('RAG_TIMEOUT_MS', '30000')),
   CORS_ORIGIN: optional('CORS_ORIGIN', 'http://localhost:3000'),
+  // Knowledge-base admin: proxied uploads can be large and slow.
+  RAG_UPLOAD_TIMEOUT_MS: Number(optional('RAG_UPLOAD_TIMEOUT_MS', '120000')),
+  MAX_UPLOAD_MB: Number(optional('MAX_UPLOAD_MB', '50')),
+  // First admin account, created at startup if it does not exist. Leave
+  // both empty to skip seeding (an existing admin can promote users).
+  ADMIN_EMAIL: optional('ADMIN_EMAIL', ''),
+  ADMIN_PASSWORD: optional('ADMIN_PASSWORD', ''),
 });

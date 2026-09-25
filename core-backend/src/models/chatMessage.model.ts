@@ -17,6 +17,13 @@ import { sequelize } from '../config/database';
 
 export type ChatMessageRole = 'user' | 'assistant';
 
+export interface Citation {
+  docTitle: string;
+  /** Engine document id — lets the client open the cited PDF pages. Absent on older messages. */
+  documentId?: number | null;
+  pages: number[];
+}
+
 export interface ChatMessageModel
   extends Model<
     InferAttributes<ChatMessageModel>,
@@ -29,6 +36,8 @@ export interface ChatMessageModel
   role: ChatMessageRole;
   content: string;
   sources: string[] | null;
+  // [{ docTitle, pages: number[] }] — richer form of `sources`, nullable.
+  citations: Citation[] | null;
   createdAt: CreationOptional<Date>;
   updatedAt: CreationOptional<Date>;
 }
@@ -56,6 +65,10 @@ export const ChatMessage = sequelize.define<ChatMessageModel>(
     },
     sources: {
       // List of cited document titles from the RAG engine (JSONB, nullable).
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
+    citations: {
       type: DataTypes.JSONB,
       allowNull: true,
     },
