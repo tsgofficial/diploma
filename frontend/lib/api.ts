@@ -98,10 +98,17 @@ export interface UploadInput {
 
 export class ApiError extends Error {
   status: number;
-  constructor(status: number, message: string) {
+  /** The JSON error body — e.g. `{ code, evaluation }` for a rule violation. */
+  data: Record<string, unknown> | null;
+  constructor(status: number, message: string, data: Record<string, unknown> | null = null) {
     super(message);
     this.status = status;
     this.name = 'ApiError';
+    this.data = data;
+  }
+
+  get code(): string | undefined {
+    return typeof this.data?.code === 'string' ? this.data.code : undefined;
   }
 }
 
@@ -115,7 +122,7 @@ function authHeaders(json = true): Record<string, string> {
 
 async function errorFrom(res: Response): Promise<ApiError> {
   const data = await res.json().catch(() => null);
-  return new ApiError(res.status, (data && data.error) || `Request failed (${res.status})`);
+  return new ApiError(res.status, (data && data.error) || `Request failed (${res.status})`, data);
 }
 
 /** Authenticated GET of a binary resource (page image, PDF). `<img src>` can't send the Bearer token. */
@@ -247,4 +254,286 @@ export async function waitForJob(id: string, onTick?: (job: IngestJob) => void, 
     if (job.status === 'done' || job.status === 'failed') return job;
     await new Promise((r) => setTimeout(r, intervalMs));
   }
+}
+
+// ------------------------------------------------------ registration ----
+
+export interface Localized {
+  mn: string;
+  en: string;
+}
+
+export type Severity = 'error' | 'warning';
+
+export interface RuleSource {
+  docTitle: string;
+  clause: string | null;
+  page: number | null;
+}
+
+export interface RuleOutcome {
+  rule: string;
+  severity: Severity;
+  status: 'passed' | 'failed' | 'skipped' | 'error';
+  title: Localized;
+  subject: { kind: 'plan' | 'course' | 'section'; id?: number | string; label?: string };
+  message: Localized | null;
+  source: RuleSource | null;
+}
+
+export interface Evaluation {
+  allowed: boolean;
+  errors: RuleOutcome[];
+  warnings: RuleOutcome[];
+  checked: number;
+}
+
+export type TermPhase = 'upcoming' | 'selection' | 'schedule' | 'in_progress' | 'closed';
+export type TermType = 'winter' | 'spring' | 'summer' | 'autumn';
+
+export interface RegTerm {
+  id: number;
+  code: string;
+  type: TermType;
+  year: number;
+  name: Localized;
+  phase: TermPhase;
+  isCurrent: boolean;
+  selectionOpensAt: string | null;
+  selectionClosesAt: string | null;
+  scheduleOpensAt: string | null;
+  scheduleClosesAt: string | null;
+}
+
+export interface Period {
+  no: number;
+  start: number;
+  end: number;
+}
+
+export interface StudentInfo {
+  code: string;
+  name: string | null;
+  email: string | null;
+  program: { code: string; name: Localized; school: string; totalCredits: number };
+  admissionYear: number;
+  semester: number;
+  year: number;
+  gpa: number | null;
+  earnedCredits: number;
+  lastTermGpa: number | null;
+  onWarning: boolean;
+  warningCount: number;
+  isDualProgram: boolean;
+}
+
+export type SectionType = 'lecture' | 'seminar' | 'lab';
+export type CategoryGroup = 'general' | 'professional' | 'specialization' | 'open';
+
+export interface Meeting {
+  dayOfWeek: number;
+  startMinute: number;
+  endMinute: number;
+  weekParity: 'all' | 'odd' | 'even';
+  room: string | null;
+}
+
+export interface SectionOption {
+  id: number;
+  code: string;
+  type: SectionType;
+  courseId: number;
+  courseCode: string | null;
+  courseName: Localized | null;
+  instructor: { id: number; name: string; title: string | null } | null;
+  meetings: Meeting[];
+  picked: boolean;
+  conflictsWith: string[];
+}
+
+export interface ScheduleCourse {
+  id: number;
+  code: string;
+  name: Localized;
+  credits: number;
+  isInternship: boolean;
+  components: Array<{ type: SectionType; pickedSectionId: number | null; options: SectionOption[] }>;
+  issues: RuleOutcome[];
+}
+
+export interface ScheduleState {
+  term: RegTerm;
+  student: StudentInfo;
+  periods: Period[];
+  courses: ScheduleCourse[];
+  picks: SectionOption[];
+  summary: { courseCount: number; completeCourses: number; pickedSections: number };
+  evaluation: Evaluation;
+}
+
+export type TimeOfDay = 'any' | 'morning' | 'afternoon' | 'evening';
+
+/** Timetable wishes for Хичээл сонголт 2; `*Strict` turns a wish into a must. */
+export interface Preferences {
+  timeOfDay: TimeOfDay;
+  timeStrict: boolean;
+  freeDays: number[];
+  freeDaysStrict: boolean;
+  avoidEarly: boolean;
+  compact: boolean;
+  fewerDays: boolean;
+}
+
+export interface Suggestion {
+  sectionIds: number[];
+  penalty: number;
+  breakdown: { gapMinutes: number; campusDays: number; earlyClasses: number; outsideWindow: number; freeDayClasses: number };
+  changes: number;
+  sections: SectionOption[];
+}
+
+export interface SuggestResult {
+  suggestions: Suggestion[];
+  blockedSlots: Array<{ courseId: number; courseLabel: string; type: SectionType; reason: 'none' | 'time' | 'free_day'; meetings: Meeting[] }>;
+  /** A must could not be met, so the suggestions treat the musts as wishes. */
+  relaxed: boolean;
+  explored: number;
+  exhaustive: boolean;
+  tookMs: number;
+}
+
+export interface CurriculumState {
+  program: { code: string; name: Localized; totalCredits: number };
+  blocks: Array<{
+    code: string;
+    name: Localized;
+    group: CategoryGroup;
+    isElective: boolean;
+    minCredits: number;
+    courses: Array<{ id: number; code: string; name: Localized; credits: number; isInternship: boolean; recommendedSemester: number | null }>;
+  }>;
+}
+
+export interface PlanCourse {
+  id: number;
+  code: string;
+  name: Localized;
+  credits: number;
+  isInternship: boolean;
+  category: string | null;
+  isRequired: boolean;
+  recommendedSemester: number | null;
+}
+
+/** Wishes for the graduation plan. */
+export interface PlanPreferences {
+  targetSemesters: number | null;
+  allowSummer: boolean;
+  maxLoad: number;
+  lightSemesters: number[];
+  interests: string[];
+  keepSelection: boolean;
+}
+
+export interface NamedTerm {
+  code: string;
+  name: Localized;
+}
+
+export interface PlanOptions {
+  term: RegTerm;
+  currentSemester: number;
+  standardSemesters: number;
+  limits: { hardMax: number; summerMax: number };
+  targets: Array<{ semesters: number; years: number; term: NamedTerm; feasible: boolean; feasibleWithSummer: boolean; reason: string | null }>;
+  semesters: Array<{ semester: number; term: NamedTerm }>;
+  interests: Array<{ key: string; name: Localized; courses: string[] }>;
+  defaults: PlanPreferences;
+}
+
+export type PlanIssue =
+  | { code: 'chain'; chain: Array<{ code: string; name: Localized | null; term: NamedTerm }> }
+  | { code: 'credits'; needed: number; capacity: number }
+  | { code: 'overload'; term: NamedTerm; courses: Array<{ code: string; name: Localized | null }> }
+  | { code: 'preferred_load'; terms: NamedTerm[] }
+  | { code: 'unschedulable'; reason: 'never_offered' | 'prerequisite_cycle'; courses: Array<{ code: string; name: Localized | null }> };
+
+export interface PlanState {
+  term: RegTerm;
+  preferences: PlanPreferences;
+  limits: { hardMax: number; summerMax: number };
+  feasible: boolean;
+  targetTerm: NamedTerm | null;
+  graduationTerm: NamedTerm | null;
+  earliestTerm: NamedTerm | null;
+  terms: Array<{
+    code: string;
+    type: TermType;
+    name: Localized;
+    semester: number | null;
+    credits: number;
+    loadCredits: number;
+    fixed: boolean;
+    light: boolean;
+    overPreferred: boolean;
+    isRegistrationTerm: boolean;
+    courses: Array<PlanCourse & { reason: 'selected' | 'required' | 'elective' | 'prerequisite'; interests: string[]; forced: boolean }>;
+  }>;
+  issues: PlanIssue[];
+  /** Semesters already behind the student (passed courses) and the one underway. */
+  history: Array<{
+    code: string;
+    type: TermType;
+    name: Localized;
+    semester: number | null;
+    credits: number;
+    loadCredits: number;
+    status: 'past' | 'current';
+    courses: PlanCourse[];
+  }>;
+  remainingCredits: number;
+  tookMs: number;
+}
+
+export interface RuleDto {
+  code: string;
+  phase: 'selection' | 'schedule';
+  scope: 'plan' | 'course' | 'section';
+  severity: Severity;
+  enabled: boolean;
+  priority: number;
+  title: Localized;
+  description: Localized | null;
+  params: Record<string, unknown>;
+  message: Localized;
+  source: RuleSource | null;
+}
+
+const reg = (termId: number) => `/api/registration/terms/${termId}`;
+const post = (body: unknown): RequestInit => ({ method: 'POST', body: JSON.stringify(body) });
+
+export const registrationApi = {
+  current: () => request<{ term: RegTerm; periods: Period[]; hasStudent: boolean }>('/api/registration/current'),
+  rules: () => request<{ rules: RuleDto[] }>('/api/registration/rules').then((r) => r.rules),
+
+  schedule: (termId: number) => request<ScheduleState>(`${reg(termId)}/schedule`),
+  pick: (termId: number, sectionId: number) => request<ScheduleState>(`${reg(termId)}/schedule`, post({ sectionId })),
+  unpick: (termId: number, sectionId: number) => request<ScheduleState>(`${reg(termId)}/schedule/${sectionId}`, { method: 'DELETE' }),
+  suggest: (termId: number, prefs: Preferences) => request<SuggestResult>(`${reg(termId)}/schedule/suggest`, post(prefs)),
+  apply: (termId: number, sectionIds: number[]) => request<ScheduleState>(`${reg(termId)}/schedule/apply`, post({ sectionIds })),
+
+  curriculum: () => request<CurriculumState>('/api/registration/curriculum'),
+  planOptions: () => request<PlanOptions>('/api/registration/plan/options'),
+  plan: (prefs: PlanPreferences) => request<PlanState>('/api/registration/plan', post(prefs)),
+
+  // Registrar
+  terms: () => request<{ terms: RegTerm[] }>('/api/admin/registration/terms').then((r) => r.terms),
+  setPhase: (id: number, phase: TermPhase) =>
+    request<RegTerm>(`/api/admin/registration/terms/${id}/phase`, { method: 'PATCH', body: JSON.stringify({ phase }) }),
+};
+
+/** The rule evaluation carried by a 422 `rule_violation` error, if any. */
+export function violationOf(err: unknown): Evaluation | null {
+  if (!(err instanceof ApiError) || err.code !== 'rule_violation') return null;
+  return (err.data?.evaluation as Evaluation | undefined) ?? null;
 }

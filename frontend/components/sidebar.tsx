@@ -1,7 +1,7 @@
 'use client';
 
 import { Button, Dropdown, Tooltip } from '@heroui/react';
-import { FileText, MessageSquarePlus, MoreHorizontal, Pencil, Shield, Trash2 } from 'lucide-react';
+import { CalendarDays, FileText, GraduationCap, MessageSquarePlus, MoreHorizontal, Pencil, Shield, Trash2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -107,6 +107,16 @@ export function Sidebar() {
           <Tooltip.Content>{t('nav.newChat')}</Tooltip.Content>
         </Tooltip>
       </div>
+
+      <div className="mt-1 px-3 text-[11px] font-medium uppercase tracking-wide text-muted">{t('nav.registration')}</div>
+      <nav className="flex flex-col gap-0.5">
+        <NavLink href="/registration/plan" active={pathname.startsWith('/registration/plan')} icon={<GraduationCap className="size-4" />} onNavigate={closeMobileNav}>
+          {t('nav.plan')}
+        </NavLink>
+        <NavLink href="/registration/schedule" active={pathname.startsWith('/registration/schedule')} icon={<CalendarDays className="size-4" />} onNavigate={closeMobileNav}>
+          {t('nav.schedule')}
+        </NavLink>
+      </nav>
 
       <nav className="flex flex-col gap-0.5">
         <NavLink href="/documents" active={pathname.startsWith('/documents')} icon={<FileText className="size-4" />} onNavigate={closeMobileNav}>

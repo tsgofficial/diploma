@@ -6,12 +6,15 @@
  */
 export interface HttpError extends Error {
   status: number;
+  /** Extra JSON merged into the response body, e.g. `{ code, evaluation }`. */
+  details?: Record<string, unknown>;
 }
 
-export function createHttpError(status: number, message: string): HttpError {
+export function createHttpError(status: number, message: string, details?: Record<string, unknown>): HttpError {
   const err = new Error(message) as HttpError;
   err.status = status;
   err.name = 'HttpError';
+  if (details) err.details = details;
   return err;
 }
 

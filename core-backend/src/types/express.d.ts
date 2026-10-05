@@ -10,6 +10,8 @@ declare global {
     interface Request {
       userId?: string | null;
       userRole?: UserRole;
+      /** Set by `requireStudent` for routes that act on the caller's student record. */
+      studentId?: number;
     }
   }
 }

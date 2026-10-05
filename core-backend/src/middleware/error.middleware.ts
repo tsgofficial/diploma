@@ -28,5 +28,6 @@ export function errorHandler(
     console.error('[error]', err);
   }
 
-  res.status(status).json({ error: message });
+  const details = isHttpError(err) && status < 500 ? err.details : undefined;
+  res.status(status).json({ ...details, error: message });
 }

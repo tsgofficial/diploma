@@ -24,6 +24,8 @@ function optional(name: string, fallback: string): string {
 export const env = Object.freeze({
   PORT: Number(optional('PORT', '4000')),
   DATABASE_URL: required('DATABASE_URL'),
+  // Connections per process. Registration transactions hold one while they wait for a row lock.
+  DB_POOL_MAX: Number(optional('DB_POOL_MAX', '10')),
   JWT_SECRET: optional('JWT_SECRET', 'dev-jwt-secret-change-me'),
   JWT_EXPIRES_IN: optional('JWT_EXPIRES_IN', '7d'),
   RAG_ENGINE_URL: optional('RAG_ENGINE_URL', 'http://localhost:8000'),

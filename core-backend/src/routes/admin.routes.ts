@@ -7,6 +7,7 @@ import multer from 'multer';
 import { env } from '../config/env';
 import { documentController } from '../controllers/document.controller';
 import { adminController } from '../controllers/admin.controller';
+import { registrationAdminController } from '../controllers/registrationAdmin.controller';
 import { requireAuth, requireRole } from '../middleware/auth.middleware';
 
 const router = Router();
@@ -33,5 +34,11 @@ router.get('/jobs/:id', documentController.job);
 router.get('/users', adminController.listUsers);
 router.patch('/users/:id/role', adminController.setRole);
 router.get('/audit', adminController.audit);
+
+// Course registration
+router.get('/registration/terms', registrationAdminController.terms);
+router.patch('/registration/terms/:id/phase', registrationAdminController.setPhase);
+router.get('/registration/rules', registrationAdminController.rules);
+router.patch('/registration/rules/:code', registrationAdminController.updateRule);
 
 export const adminRoutes = router;

@@ -7,6 +7,7 @@ import { chatRoutes } from './chat.routes';
 import { sessionRoutes } from './session.routes';
 import { documentRoutes } from './document.routes';
 import { adminRoutes } from './admin.routes';
+import { registrationRoutes } from './registration.routes';
 
 export const apiRouter = Router();
 
@@ -15,3 +16,4 @@ apiRouter.use('/chat', chatRoutes);
 apiRouter.use('/sessions', sessionRoutes);
 apiRouter.use('/documents', documentRoutes);
 apiRouter.use('/admin', adminRoutes);
+apiRouter.use('/registration', registrationRoutes);
